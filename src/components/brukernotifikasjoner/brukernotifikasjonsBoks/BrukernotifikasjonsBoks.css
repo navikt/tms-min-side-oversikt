@@ -1,0 +1,18 @@
+.brukernotifikasjon-wrapper {
+  border: none;
+  border-radius: 8px;
+}
+
+.brukernotifikasjon-tekst-wrapper {
+  padding: 0 1rem 0 0;
+}
+
+.brukernotifikasjon-tekst {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.brukernotifikasjon-dato {
+  font-size: 1rem;
+  margin: 0;
+}

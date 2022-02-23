@@ -1,10 +1,10 @@
-import { useState } from "react";
 import { useQuery } from "react-query";
 import { apiUrl } from "./api/urls";
 import { fetcher } from "./api/api";
 import Komponent from "./components/Komponent";
 import "@navikt/ds-css";
 import "./App.css";
+import MainComponent from "./components/MainComponent/MainComponent";
 
 function App() {
   const { data } = useQuery(apiUrl, fetcher);
@@ -12,7 +12,7 @@ function App() {
   return (
     <main className="main">
       <div className="app">
-        <Komponent tekst={data?.tekst} />
+        <MainComponent />
       </div>
     </main>
   );

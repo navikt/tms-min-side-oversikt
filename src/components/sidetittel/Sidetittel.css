@@ -1,0 +1,9 @@
+.person-logo {
+  width: 2.6rem;
+  height: 2.6rem;
+  margin: 4rem 0 1rem 0;
+}
+
+.person-tekst {
+  text-transform: capitalize;
+}

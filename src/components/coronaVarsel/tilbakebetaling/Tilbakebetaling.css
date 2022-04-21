@@ -1,0 +1,7 @@
+.tilbakebetaling {
+  margin-right: 1rem;
+}
+
+.tilbakebetaling:hover {
+  cursor: pointer;
+}

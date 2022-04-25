@@ -12,12 +12,13 @@ const LenkePanelHoyre = () => {
   const translate = useIntl();
 
   const brukerUnderOppfolging = oppfolging?.erBrukerUnderOppfolging;
+
   return (
     <section className="lenkepanel-hoyre-content">
       <Heading spacing level="2" size="small" className="tittel">
         {translate.formatMessage({ id: "lenkepanel.hoyre.tittel" })}
       </Heading>
-      <Link>
+      <Link href={"https://innboks.nav.no"}>
         <Email />
         {translate.formatMessage({ id: "lenkepanel.hoyre.lenketekst.innboks" })}
       </Link>
@@ -26,7 +27,7 @@ const LenkePanelHoyre = () => {
       </Detail>
       {brukerUnderOppfolging ? (
         <>
-          <Link>
+          <Link href={`${window.env.NAVNO_URL}/person/dittnav/veientilarbeid/dialog`}>
             <Dialog />
             {translate.formatMessage({ id: "lenkepanel.hoyre.lenketekst.dialog" })}
           </Link>
@@ -35,7 +36,7 @@ const LenkePanelHoyre = () => {
           </Detail>
         </>
       ) : null}
-      <Link>
+      <Link href={"https://mininnboks.nav.no"}>
         <Folder />
         {translate.formatMessage({ id: "lenkepanel.hoyre.lenketekst.brevogvedtak" })}
       </Link>

@@ -23,12 +23,12 @@ const LenkePanelVenstre = () => {
           <Heading spacing level="2" size="small">
             {translate.formatMessage({ id: "lenkepanel.venstre.tittel" })}
           </Heading>
-          <Link>{saker?.sakstemaer[0].navn}</Link>
+          <Link href={saker?.sakstemaer[0].detaljvisningUrl}>{saker?.sakstemaer[0].navn}</Link>
           <Detail spacing className="dato-label">
             {translate.formatMessage({ id: "lenkepanel.venstre.lenkedetail" }) +
               formatDateAndTime(saker?.sakstemaer[0].sistEndret)}
           </Detail>
-          <Link>{saker?.sakstemaer[1].navn}</Link>
+          <Link href={saker?.sakstemaer[1].detaljvisningUrl}>{saker?.sakstemaer[1].navn}</Link>
           <Detail spacing className="dato-label">
             {translate.formatMessage({ id: "lenkepanel.venstre.lenkedetail" }) +
               formatDateAndTime(saker?.sakstemaer[1].sistEndret)}

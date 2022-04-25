@@ -5,16 +5,14 @@ import i18n from "../../../language/i18n";
 import { sortByEventTidspunkt } from "../../../utils/sorter";
 import isMasked from "../../../utils/isMasked";
 import useStore from "../../../store/store";
-import { selectBeskjederList, selectClear, selectRemoveBeskjed } from "../../../store/selectors";
+import { selectRemoveBeskjed } from "../../../store/selectors";
 import { postDone, postDigisosDone } from "../../../api/api";
 
 const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks }) => {
   const translate = useIntl();
-  const { formatDateAndTime, formatDateMonth, formatDayAndMonth, numberToWord } = i18n[translate.locale];
+  const { formatDateAndTime } = i18n[translate.locale];
 
   const removeBeskjed = useStore(selectRemoveBeskjed);
-  const liste = useStore(selectBeskjederList);
-  const clearList = useStore(selectClear);
 
   const remove = (beskjed) => {
     if (beskjed.produsent === "digiSos") {
@@ -33,8 +31,9 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
   return (
     <>
       {oppgaver &&
-        oppgaver?.sort(sortByEventTidspunkt).map((o) => {
-          return (
+        oppgaver
+          ?.sort(sortByEventTidspunkt)
+          .map((o) => (
             <MeldingsBoks
               key={o.eventId}
               tekst={o.tekst}
@@ -43,8 +42,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
               type="oppgave"
               isMasked={isMasked(innloggingsstatus, o?.sikkerhetsnivaa)}
             />
-          );
-        })}
+          ))}
       {beskjeder &&
         beskjeder
           .sort(sortByEventTidspunkt)

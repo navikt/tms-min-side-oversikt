@@ -4,7 +4,7 @@
   flex: 1;
   justify-content: left;
   align-items: stretch;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 0 0;
 }
 
 .lenkepanel-venstre-content > a {
@@ -44,6 +44,17 @@
   margin-left: 0.5rem;
 }
 
-.lenkepanel-venstre-liten {
-  margin: 1rem 0 1rem 0;
+@media (min-width: 0px) {
+  .lenkepanel-venstre-liten {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 648px) {
+}
+
+@media (min-width: 960px) {
+  .lenkepanel-venstre-liten {
+    margin-top: 1rem;
+  }
 }

@@ -5,7 +5,13 @@ import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Mikrofrontend />
+    <div className="page-wrapper">
+      <div className="page-layout">
+        <main>
+          <Mikrofrontend />
+        </main>
+      </div>
+    </div>
   </React.StrictMode>,
   document.getElementById("root")
 );

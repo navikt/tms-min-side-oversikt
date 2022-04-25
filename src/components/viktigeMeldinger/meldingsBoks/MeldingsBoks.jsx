@@ -43,12 +43,14 @@ const MeldingsBoks = ({ tekst, dato, href, type, isMasked, remove, beskjed }) =>
         </LinkPanel>
       ) : (
         <Panel className="beskjed-arkiver" onClick={() => remove(beskjed)}>
-          <BeskjedIkon className="beskjed-arkiver-ikon" />
-          <div className="beskjed-arkiver-tekst-wrapper">
-            <Heading spacing level="2" size="medium">
-              {printTekst}
-            </Heading>
-            <BodyShort>{dato}</BodyShort>
+          <div className="beskjed-arkiver-content">
+            <BeskjedIkon className="beskjed-arkiver-ikon" />
+            <div className="beskjed-arkiver-tekst-wrapper">
+              <Heading spacing level="2" size="medium">
+                {printTekst}
+              </Heading>
+              <BodyShort>{dato}</BodyShort>
+            </div>
           </div>
           <MinusCircle className="beskjed-arkiver-knapp-ikon" />
         </Panel>

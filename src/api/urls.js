@@ -62,3 +62,5 @@ export const koronaVeiviserUrl = `${navUrl}/person/koronaveiviser`;
 export const utbetalingsoversiktUrl = `${tjenesterUrl}/utbetalingsoversikt`;
 export const mineSakerUrl = `${personNavUrl}/mine-saker`;
 export const oppfolgingUrl = `${dittNavApiUrl}/oppfolging`;
+export const postDigiSosDoneUrl = `${dittNavApiUrl}/digisos/paabegynte/done`;
+export const postDoneUrl = `${dittNavApiUrl}/produce/done`;

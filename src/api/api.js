@@ -1,3 +1,5 @@
+import { postDigiSosDoneUrl, postDoneUrl } from "./urls";
+
 const checkResponse = (response) => {
   if (!response.ok) {
     throw new Error("Fetch request failed");
@@ -30,6 +32,6 @@ const postJSON = (url, content) =>
       .catch((e) => reject(e));
   });
 
-export const postDone = (content) => postJSON(`${"url"}`, content);
+export const postDone = (content) => postJSON(postDigiSosDoneUrl, content);
 
-export const postDigisosDone = (content) => postJSON(`${"url"}`, content);
+export const postDigisosDone = (content) => postJSON(postDoneUrl, content);

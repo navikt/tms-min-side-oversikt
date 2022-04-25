@@ -1,0 +1,54 @@
+.brukernotifikasjon-wrapper {
+  border: none;
+  border-radius: 8px;
+}
+
+.brukernotifikasjon-tekst-wrapper {
+  padding: 0 1rem 0 0;
+  justify-items: center;
+  align-items: center;
+}
+
+.brukernotifikasjon-tekst {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0 !important;
+}
+
+.brukernotifikasjon-dato {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.beskjed-arkiver {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.beskjed-arkiver-content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.beskjed-arkiver-ikon {
+  display: flex;
+  align-self: center;
+  overflow: visible;
+}
+
+.beskjed-arkiver-tekst-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 2rem 0 2rem;
+}
+
+.beskjed-arkiver-knapp-ikon {
+  display: flex;
+  align-self: center;
+  justify-self: right;
+  min-width: 1.5rem;
+  width: 1.5rem;
+  min-height: 1.5rem;
+  height: 1.5rem;
+}

@@ -1,10 +1,27 @@
+@import "../node_modules/@navikt/ds-css";
+
 html,
 body {
   height: 100%;
 }
 
 body {
-  background-color: #1f1d2e;
-  color: #575279;
-  font-family: sans-serif;
+  background-color: var(--navds-semantic-color-canvas-background);
+}
+
+.page-wrapper {
+  height: auto;
+  min-height: 100%;
+}
+
+.page-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+  max-width: 808px;
 }

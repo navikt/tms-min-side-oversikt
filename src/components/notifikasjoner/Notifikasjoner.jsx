@@ -1,6 +1,5 @@
 import React from "react";
 import { useQuery } from "react-query";
-import { useIntl } from "react-intl";
 import { fetcher } from "../../api/api";
 import {
   oppgaverApiUrl,

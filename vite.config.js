@@ -4,6 +4,7 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import { viteMockServe } from "vite-plugin-mock";
 import { terser } from "rollup-plugin-terser";
 import { rollupImportMapPlugin } from "rollup-plugin-import-map";
+import { resolve } from "path";
 
 const reactUrl = "https://min-side-assets.dev.intern.nav.no/asset/react/v/17/index.esm.js";
 const reactDomUrl = "https://min-side-assets.dev.intern.nav.no/asset/react-dom/v/17/index.esm.js";

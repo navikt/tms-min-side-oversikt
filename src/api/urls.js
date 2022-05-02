@@ -58,11 +58,11 @@ export const personNavUrl = PERSON_NAV_URL[getEnvironment()];
 
 export const meldekortinfoApiUrl = `${dittNavApiUrl}/meldekortinfo`;
 export const meldekortUrl = `${navUrl}/meldekort`;
-export const oppgaverApiUrl = `${dittNavApiUrl}/oppgaver`;
-export const beskjederApiUrl = `${dittNavApiUrl}/beskjeder`;
+export const oppgaverApiUrl = `${dittNavApiUrl}/oppgave`;
+export const beskjederApiUrl = `${dittNavApiUrl}/beskjed`;
 export const innboksApiUrl = `${dittNavApiUrl}/innboks`;
-export const inaktiveOppgaverApiUrl = `${dittNavApiUrl}/oppgaver/inaktiv`;
-export const inaktiveBeskjederApiUrl = `${dittNavApiUrl}/beskjeder/inaktiv`;
+export const inaktiveOppgaverApiUrl = `${dittNavApiUrl}/oppgave/inaktiv`;
+export const inaktiveBeskjederApiUrl = `${dittNavApiUrl}/beskjed/inaktiv`;
 export const inaktiveInnboksApiUrl = `${dittNavApiUrl}/innboks/inaktiv`;
 export const brukernavnApiUrl = `${dittNavApiUrl}/navn`;
 export const identApiUrl = `${dittNavApiUrl}/ident`;

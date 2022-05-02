@@ -14,7 +14,7 @@ const Sidetittel = () => {
     return null;
   }
 
-  const navnOrIdent = navnFailed ? ident.ident : navn.navn.toLowerCase();
+  const navnOrIdent = navnFailed ? ident?.ident : navn?.navn.toLowerCase();
 
   return (
     <>

@@ -1,37 +1,51 @@
-function getEnvironment() {
-  if (process.env.NODE_ENV === "production") {
+const isProduction = window.location.href.includes("www.nav.no");
+const isDevelopment = window.location.href.includes("www.dev.nav.no");
+
+export const getEnvironment = () => {
+  if (isProduction) {
     return "production";
   }
-  return "development";
-}
+
+  if (isDevelopment) {
+    return "development";
+  }
+
+  return "local";
+};
 
 const NAV_URL = {
-  development: "http://localhost:3000",
+  local: "http://localhost:3000",
+  development: "https://dev.nav.no",
   production: "https://nav.no",
 };
 
 const API_URL = {
-  development: "http://localhost:3000/api/endpoint",
+  local: "http://localhost:3000/api/endpoint",
+  development: "https://person.dev.nav.no/api/endpoint",
   production: "https://person.nav.no/api/endpoint",
 };
 
 const DITTNAV_API_URL = {
-  development: "http://localhost:3000/dittnav-api",
+  local: "http://localhost:3000/dittnav-api",
+  development: "https://www.dev.nav.no/person/dittnav-api",
   production: "https://www.nav.no/person/dittnav-api",
 };
 
 const LOGINSERVICE_URL = {
-  development: "http://localhost:3000",
+  local: "http://localhost:3000",
+  development: "https://loginservice.dev.nav.no",
   production: "https://loginservice.nav.no",
 };
 
 const TJENESTER_URL = {
-  development: "http://localhost:3000/tjenester",
+  local: "http://localhost:3000/tjenester",
+  development: "https://tjenester.dev.nav.no",
   production: "https://tjenester.nav.no",
 };
 
 const PERSON_NAV_URL = {
-  development: "http://localhost:3000",
+  local: "http://localhost:3000",
+  development: "https://person.dev.nav.no",
   production: "https://person.nav.no",
 };
 

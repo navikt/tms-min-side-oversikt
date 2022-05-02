@@ -27,8 +27,8 @@ const API_URL = {
 
 const DITTNAV_API_URL = {
   local: "http://localhost:3000/dittnav-api",
-  development: "https://www.dev.nav.no/person/dittnav-api",
-  production: "https://www.nav.no/person/dittnav-api",
+  development: "https://person.dev.nav.no/dittnav-api",
+  production: "https://person.nav.no/dittnav-api",
 };
 
 const LOGINSERVICE_URL = {

@@ -44,7 +44,7 @@ const MeldingsBoks = ({ tekst, dato, href, type, isMasked, remove, beskjed }) =>
       ) : (
         <Panel className="beskjed-arkiver" onClick={() => remove(beskjed)}>
           <div className="beskjed-arkiver-content">
-            <BeskjedIkon className="beskjed-arkiver-ikon" />
+            <BeskjedIkon />
             <div className="beskjed-arkiver-tekst-wrapper">
               <Heading spacing level="2" size="medium">
                 {printTekst}

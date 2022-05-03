@@ -36,6 +36,12 @@
   overflow: visible;
 }
 
+.oppgave-arkiver-ikon {
+  display: flex;
+  align-self: center;
+  overflow: visible;
+}
+
 .beskjed-arkiver-tekst-wrapper {
   display: flex;
   flex-direction: column;

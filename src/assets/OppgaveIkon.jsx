@@ -1,7 +1,14 @@
 import React from "react";
 
 const OppgaveIkon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 3rem 3rem" fill="none">
+  <svg
+    className="oppgave-arkiver-ikon"
+    xmlns="http://www.w3.org/2000/svg"
+    width="3rem"
+    height="3rem"
+    viewBox="0 0 45 45"
+    fill="none"
+  >
     <circle cx="1.5rem" cy="1.5rem" r="1.5rem" fill="#D47B00" />
     <path
       fillRule="evenodd"

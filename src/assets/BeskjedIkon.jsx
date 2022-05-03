@@ -7,7 +7,7 @@ const BeskjedIkon = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="3rem"
       height="3rem"
-      viewBox="0 0 3rem 3rem"
+      viewBox="0 0 45 45"
       fill="none"
     >
       <circle cx="1.5rem" cy="1.5rem" r="1.5rem" fill="#3386E0" />

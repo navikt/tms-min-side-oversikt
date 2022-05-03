@@ -73,7 +73,7 @@ export const innloggingsstatusUrl = `${navUrl}/person/innloggingsstatus`;
 export const loginserviceStepUpUrl = `${loginserviceUrl}/login?level=Level4&redirect=https://www.nav.no/person/dittnav`;
 export const tilbakebetalingsUrl = `${navUrl}/dagpenger/forskudd/oversikt`;
 export const koronaVeiviserUrl = `${navUrl}/person/koronaveiviser`;
-export const utbetalingsoversiktUrl = `${tjenesterUrl}/utbetalingsoversikt`;
+export const utbetalingsoversiktUrl = `${navUrl}/utbetalingsoversikt`;
 export const mineSakerUrl = `${personNavUrl}/mine-saker`;
 export const oppfolgingUrl = `${dittNavApiUrl}/oppfolging`;
 export const postDigiSosDoneUrl = `${dittNavApiUrl}/digisos/paabegynte/done`;

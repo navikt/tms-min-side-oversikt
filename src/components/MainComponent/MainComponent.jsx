@@ -1,4 +1,4 @@
-import React from "react"; //fiks med cdn ipmport?
+import React from "react";
 import Sidetittel from "../sidetittel/Sidetittel";
 import InngangVarslinger from "../viktigeMeldinger/inngangVarslinger/InngangVarslinger";
 import Tilbakebetaling from "../coronaVarsel/tilbakebetaling/Tilbakebetaling";
@@ -6,8 +6,8 @@ import KoronaVarsel from "../coronaVarsel/tilbakebetaling/varsel/KoronaVarsel";
 import Utbetaling from "../utbetaling/Utbetaling";
 import LenkePanelVenstre from "../lenkepanelVenstre/LenkePanelVenstre";
 import LenkePanelHoyre from "../lenkepanelHoyre/LenkePanelHoyre";
-import "./MainComponent.css";
 import Notifikasjoner from "../notifikasjoner/Notifikasjoner";
+import "./MainComponent.css";
 
 const MainComponent = () => {
   return (

@@ -15,8 +15,8 @@ export const getEnvironment = () => {
 
 const NAV_URL = {
   local: "http://localhost:3000",
-  development: "https://dev.nav.no",
-  production: "https://nav.no",
+  development: "https://www.dev.nav.no",
+  production: "https://www.nav.no",
 };
 
 const API_URL = {

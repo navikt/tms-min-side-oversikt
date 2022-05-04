@@ -19,7 +19,7 @@ const InngangVarslinger = () => {
   return (
     <>
       {skjulInngang ? null : (
-        <Button variant="primary" size="medium" className="varslinger-button">
+        <Button variant="secondary" size="medium" className="varslinger-button">
           {translate.formatMessage({ id: "dittnav.infomeldinger.inngang.varslinger" })}
         </Button>
       )}

@@ -146,34 +146,6 @@ export default [
     },
   },
   {
-    url: "/dittnav-api/meldinger/ubehandlede",
-    method: "get",
-    response: () => {
-      return [
-        {
-          type: "ULEST",
-          url: "https://tjenester-t6.nav.no/mininnboks",
-          antall: 2,
-        },
-        {
-          type: "UBESVART",
-          url: "https://tjenester-t6.nav.no/mininnboks",
-          antall: 2,
-        },
-        {
-          type: "DOKUMENT_VARSEL",
-          url: "https://tjenester-t6.nav.no/mininnboks",
-          antall: 2,
-        },
-        {
-          type: "OPPGAVE_VARSEL",
-          url: "test7.url",
-          antall: 1,
-        },
-      ];
-    },
-  },
-  {
     url: "/dittnav-api/beskjeder/inaktiv",
     method: "get",
     response: () => {

@@ -1,4 +1,4 @@
-import { Button } from "@navikt/ds-react";
+import "./ArkiverKnapp.css";
 
 const ArkiverKnapp = ({ remove, beskjed }) => {
   return (

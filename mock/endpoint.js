@@ -9,7 +9,7 @@ export default [
     },
   },
   {
-    url: "/dittnav-api/oppgaver",
+    url: "/dittnav-api/oppgave",
     method: "get",
     response: () => {
       return [
@@ -200,7 +200,7 @@ export default [
     },
   },
   {
-    url: "/dittnav-api/oppgaver/inaktiv",
+    url: "/dittnav-api/oppgave/inaktiv",
     method: "get",
     response: () => {
       return [

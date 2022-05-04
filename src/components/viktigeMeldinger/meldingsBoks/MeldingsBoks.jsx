@@ -7,7 +7,7 @@ import BeskjedIkon from "../../../assets/BeskjedIkon";
 import { loginserviceStepUpUrl } from "../../../api/urls";
 import "./MeldingsBoks.css";
 
-const MeldingsBoks = ({ tekst, dato, href, type, isMasked, remove, beskjed }) => {
+const MeldingsBoks = ({ key, tekst, dato, href, type, isMasked, remove, beskjed }) => {
   const translate = useIntl();
   const isOppgave = type === "oppgave";
   const isInnboks = type === "innboks";
@@ -23,7 +23,7 @@ const MeldingsBoks = ({ tekst, dato, href, type, isMasked, remove, beskjed }) =>
   return (
     <>
       {!isArkiverbarBeskjed ? (
-        <LinkPanel className="brukernotifikasjon-wrapper" href={lenke} border={false}>
+        <LinkPanel className="brukernotifikasjon-wrapper" href={lenke} border={false} key={key}>
           <div
             style={{
               display: "grid",
@@ -42,7 +42,7 @@ const MeldingsBoks = ({ tekst, dato, href, type, isMasked, remove, beskjed }) =>
           </div>
         </LinkPanel>
       ) : (
-        <Panel className="beskjed-arkiver" onClick={() => remove(beskjed)}>
+        <Panel className="beskjed-arkiver" onClick={() => remove(beskjed)} key={key}>
           <div className="beskjed-arkiver-content">
             <BeskjedIkon />
             <div className="beskjed-arkiver-tekst-wrapper">

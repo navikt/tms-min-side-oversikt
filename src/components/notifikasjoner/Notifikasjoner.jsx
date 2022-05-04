@@ -28,9 +28,9 @@ const Notifikasjoner = () => {
   const { data: innboks } = useQuery(innboksApiUrl, fetcher);
 
   const { data: meldekort } = useQuery(meldekortinfoApiUrl, fetcher);
+
   //innboks
   const { data: ubehandledeMeldinger } = useQuery(ubehandledeMeldingerApiUrl, fetcher);
-  //const { data: paabegynteSoknader } = useQuery(paabegynteSoknaderApiUrl, fetcher);
 
   return (
     <>

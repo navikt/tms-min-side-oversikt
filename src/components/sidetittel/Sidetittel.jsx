@@ -17,12 +17,12 @@ const Sidetittel = () => {
   const navnOrIdent = navnFailed ? ident?.ident : navn?.navn.toLowerCase();
 
   return (
-    <>
+    <section className="heading-wrapper">
       <People className="person-logo" />
       <Heading spacing size="xlarge" level="2" className="person-tekst">
         {navnOrIdent}
       </Heading>
-    </>
+    </section>
   );
 };
 

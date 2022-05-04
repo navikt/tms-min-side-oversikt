@@ -1,9 +1,16 @@
+.heading-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
 .person-logo {
   width: 2.6rem;
   height: 2.6rem;
-  margin: 4rem 0 1rem 0;
+  margin-right: 2rem;
 }
 
 .person-tekst {
   text-transform: capitalize;
+  margin: 0 !important;
 }

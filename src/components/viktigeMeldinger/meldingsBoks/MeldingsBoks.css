@@ -62,5 +62,7 @@
   display: flex;
   align-self: center;
   justify-self: center;
+  font-size: 16px !important;
+  font-weight: bold;
 }
 

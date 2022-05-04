@@ -57,7 +57,7 @@ export default [
     },
   },
   {
-    url: "/dittnav-api/beskjeder",
+    url: "/dittnav-api/beskjed",
     method: "get",
     response: () => {
       return [
@@ -146,7 +146,7 @@ export default [
     },
   },
   {
-    url: "/dittnav-api/beskjeder/inaktiv",
+    url: "/dittnav-api/beskjed/inaktiv",
     method: "get",
     response: () => {
       return [

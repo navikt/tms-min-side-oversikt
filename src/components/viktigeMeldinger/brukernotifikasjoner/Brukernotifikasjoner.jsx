@@ -15,6 +15,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
   const removeBeskjed = useStore(selectRemoveBeskjed);
 
   const remove = (beskjed) => {
+    console.log("test");
     if (beskjed.produsent === "digiSos") {
       postDigisosDone({
         eventId: beskjed.eventId,

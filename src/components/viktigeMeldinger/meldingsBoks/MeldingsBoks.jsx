@@ -1,10 +1,10 @@
 import React from "react";
 import { useIntl } from "react-intl";
 import { BodyShort, Heading, LinkPanel, Panel } from "@navikt/ds-react";
-import { MinusCircle } from "@navikt/ds-icons";
 import OppgaveIkon from "../../../assets/OppgaveIkon";
 import BeskjedIkon from "../../../assets/BeskjedIkon";
 import { loginserviceStepUpUrl } from "../../../api/urls";
+import ArkiverKnapp from "../../arkiverKnapp/ArkiverKnapp";
 import "./MeldingsBoks.css";
 
 const MeldingsBoks = ({ key, tekst, dato, href, type, isMasked, remove, beskjed }) => {
@@ -42,7 +42,7 @@ const MeldingsBoks = ({ key, tekst, dato, href, type, isMasked, remove, beskjed 
           </div>
         </LinkPanel>
       ) : (
-        <Panel className="beskjed-arkiver" onClick={() => remove(beskjed)} key={key}>
+        <Panel className="beskjed-arkiver" key={key}>
           <div className="beskjed-arkiver-content">
             <BeskjedIkon />
             <div className="beskjed-arkiver-tekst-wrapper">
@@ -51,8 +51,8 @@ const MeldingsBoks = ({ key, tekst, dato, href, type, isMasked, remove, beskjed 
               </Heading>
               <BodyShort>{dato}</BodyShort>
             </div>
+            <ArkiverKnapp className="beskjed-arkiver-knapp" remove={remove} beskjed={beskjed} />
           </div>
-          <MinusCircle className="beskjed-arkiver-knapp-ikon" />
         </Panel>
       )}
     </>

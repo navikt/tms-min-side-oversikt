@@ -5,8 +5,6 @@ import {
   oppgaverApiUrl,
   beskjederApiUrl,
   innboksApiUrl,
-  ubehandledeMeldingerApiUrl,
-  paabegynteSoknaderApiUrl,
   innloggingsstatusUrl,
   meldekortinfoApiUrl,
 } from "../../api/urls";
@@ -14,7 +12,6 @@ import Brukernotifikasjoner from "../viktigeMeldinger/brukernotifikasjoner/Bruke
 import { selectAddBeskjederList, selectBeskjederList } from "../../store/selectors";
 import useStore from "../../store/store";
 import Meldekort from "../viktigeMeldinger/meldekort/Meldekort";
-import Innboks from "../viktigeMeldinger/innboks/Innboks";
 
 const Notifikasjoner = () => {
   const { data: innloggingsstatus } = useQuery(innloggingsstatusUrl, fetcher);
@@ -29,9 +26,6 @@ const Notifikasjoner = () => {
 
   const { data: meldekort } = useQuery(meldekortinfoApiUrl, fetcher);
 
-  //innboks
-  const { data: ubehandledeMeldinger } = useQuery(ubehandledeMeldingerApiUrl, fetcher);
-
   return (
     <>
       <Meldekort meldekort={meldekort} />
@@ -41,7 +35,6 @@ const Notifikasjoner = () => {
         beskjeder={beskjeder}
         innboks={innboks}
       />
-      <Innboks meldinger={ubehandledeMeldinger} />
     </>
   );
 };

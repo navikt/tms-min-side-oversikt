@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
+import viteCompression from "vite-plugin-compression";
 import { viteMockServe } from "vite-plugin-mock";
 import { terser } from "rollup-plugin-terser";
 import { rollupImportMapPlugin } from "rollup-plugin-import-map";
@@ -19,6 +20,12 @@ export default ({ command }) => ({
     react(),
     terser(),
     cssInjectedByJsPlugin(),
+    // gizp
+    viteCompression(),
+    // br
+    viteCompression({
+      algorithm: "brotliCompress",
+    }),
     viteMockServe({
       mockPath: "mock",
       localEnabled: command === "serve",

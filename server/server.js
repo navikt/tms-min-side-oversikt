@@ -13,6 +13,7 @@ server.use(cors({ origin: corsAllowedOrigin }));
 const expressStaticGzip = require("express-static-gzip");
 
 server.use(
+  basePath,
   expressStaticGzip(buildPath, {
     enableBrotli: true,
   })

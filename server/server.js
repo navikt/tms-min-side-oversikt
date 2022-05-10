@@ -8,7 +8,15 @@ const corsAllowedOrigin = process.env.CORS_ALLOWED_ORIGIN || "http://localhost:3
 
 server.use(cors({ origin: corsAllowedOrigin }));
 
-server.use(basePath, express.static(buildPath));
+//server.use(basePath, express.static(buildPath));
+
+const expressStaticGzip = require("express-static-gzip");
+
+server.use(
+  expressStaticGzip(buildPath, {
+    enableBrotli: true,
+  })
+);
 
 server.get(`${basePath}/internal/isAlive`, (req, res) => {
   res.sendStatus(200);

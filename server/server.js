@@ -8,8 +8,6 @@ const corsAllowedOrigin = process.env.CORS_ALLOWED_ORIGIN || "http://localhost:3
 
 server.use(cors({ origin: corsAllowedOrigin }));
 
-//server.use(basePath, express.static(buildPath));
-
 const expressStaticGzip = require("express-static-gzip");
 
 server.use(

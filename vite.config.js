@@ -20,9 +20,9 @@ export default ({ command }) => ({
     react(),
     terser(),
     cssInjectedByJsPlugin(),
-    // gizp
-    viteCompression(),
-    // br
+    viteCompression({
+      algorithm: "gzip",
+    }),
     viteCompression({
       algorithm: "brotliCompress",
     }),

@@ -1,0 +1,11 @@
+.generelle-fliser {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem 1rem;
+    margin-top: 1rem;
+}
+
+.generelle-fliser > a {
+    margin-bottom: 1rem;
+}

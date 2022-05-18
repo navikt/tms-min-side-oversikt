@@ -78,3 +78,7 @@ export const mineSakerUrl = `${personNavUrl}/mine-saker`;
 export const oppfolgingUrl = `${dittNavApiUrl}/oppfolging`;
 export const postDigiSosDoneUrl = `${dittNavApiUrl}/digisos/paabegynte/done`;
 export const postDoneUrl = `${dittNavApiUrl}/produce/done`;
+export const sykefravaerUrl = `${navUrl}/syk/sykefravaer`;
+export const arbeidUrl = `${navUrl}/arbeid`;
+export const soknadUrl = `${navUrl}/soknader`;
+export const dinPensjonUrl = `${tjenesterUrl}/pselv/publisering/dinpensjon.jsf`;

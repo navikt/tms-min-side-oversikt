@@ -46,5 +46,14 @@
 
   "oppgave.maskert.tekst": "Du har fått en oppgave, logg inn med høyere sikkerhetsnivå for å se oppgaven.",
   "beskjed.maskert.tekst": "Du har fått en melding, logg inn med høyere sikkerhetsnivå for å se meldingen.",
-  "dine.siste.saker": "Dine siste saker"
+  "dine.siste.saker": "Dine siste saker",
+
+  "generellefliser.sykefravaer-tittel": "Ditt sykefravær",
+  "generellefliser.sykefravaer-ingress": "Dine sykemeldinger og oppgaver",
+  "generellefliser.mistet.jobb-tittel": "Mistet jobben?",
+  "generellefliser.mistet-jobb-ingress": "Jobbsøkertips, økonomi og hjelp fra NAV",
+  "generellefliser.skjemaer-tittel": "Skjemaer",
+  "generellefliser.skjemaer-ingress": "Alle skjemaer og søknader i NAV",
+  "generellefliser.pensjon-tittel": "Din pensjon",
+  "generellefliser.pensjon-ingress": "Kalkulator, søknad og utbetalinger"
 }

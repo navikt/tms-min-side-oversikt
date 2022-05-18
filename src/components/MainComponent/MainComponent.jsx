@@ -8,6 +8,7 @@ import LenkePanelVenstre from "../lenkepanelVenstre/LenkePanelVenstre";
 import LenkePanelHoyre from "../lenkepanelHoyre/LenkePanelHoyre";
 import Notifikasjoner from "../notifikasjoner/Notifikasjoner";
 import "./MainComponent.css";
+import GenerelleFliser from "../generelleFliser/GenerelleFliser";
 
 const MainComponent = () => {
   return (
@@ -30,6 +31,7 @@ const MainComponent = () => {
           <LenkePanelHoyre />
         </section>
       </section>
+      <GenerelleFliser />
     </section>
   );
 };

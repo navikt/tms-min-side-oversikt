@@ -1,4 +1,4 @@
-import MainComponent from "./components/MainComponent/MainComponent";
+import MainPage from "./components/mainPage/MainPage";
 import "@navikt/ds-css";
 import "./App.css";
 
@@ -6,7 +6,7 @@ function App() {
   return (
     <main className="main">
       <div className="app">
-        <MainComponent />
+        <MainPage />
       </div>
     </main>
   );

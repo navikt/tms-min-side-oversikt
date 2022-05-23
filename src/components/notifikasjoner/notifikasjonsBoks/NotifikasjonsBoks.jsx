@@ -5,9 +5,9 @@ import { MinusCircle } from "@navikt/ds-icons";
 import OppgaveIkon from "../../../assets/OppgaveIkon";
 import BeskjedIkon from "../../../assets/BeskjedIkon";
 import { loginserviceStepUpUrl } from "../../../api/urls";
-import "./MeldingsBoks.css";
+import "./NotifikasjonsBoks.css";
 
-const MeldingsBoks = ({ key, tekst, dato, href, type, isMasked, remove, beskjed }) => {
+const NotifikasjonsBoks = ({ key, tekst, dato, href, type, isMasked, remove, beskjed }) => {
   const translate = useIntl();
   const isOppgave = type === "oppgave";
   const isInnboks = type === "innboks";
@@ -59,4 +59,4 @@ const MeldingsBoks = ({ key, tekst, dato, href, type, isMasked, remove, beskjed 
   );
 };
 
-export default MeldingsBoks;
+export default NotifikasjonsBoks;

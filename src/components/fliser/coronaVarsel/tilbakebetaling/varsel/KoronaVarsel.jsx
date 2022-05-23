@@ -1,8 +1,7 @@
 import React from "react";
 import { useIntl } from "react-intl";
 import { LinkPanel } from "@navikt/ds-react";
-import { koronaVeiviserUrl } from "../../../../api/urls";
-
+import { koronaVeiviserUrl } from "../../../../../api/urls";
 const KoronaVarsel = () => {
   const translate = useIntl();
 

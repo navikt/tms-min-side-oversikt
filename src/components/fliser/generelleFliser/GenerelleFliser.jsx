@@ -1,5 +1,5 @@
 import { Bandage, DirectionSign, Notes, Saving } from "@navikt/ds-icons";
-import { arbeidUrl, dinPensjonUrl, soknadUrl, sykefravaerUrl } from "../../api/urls";
+import { arbeidUrl, dinPensjonUrl, soknadUrl, sykefravaerUrl } from "../../../api/urls";
 import Flis from "./Flis";
 import "./GenerelleFliser.css";
 

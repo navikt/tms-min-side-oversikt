@@ -1,16 +1,16 @@
 import React from "react";
-import Sidetittel from "../sidetittel/Sidetittel";
-import InngangVarslinger from "../viktigeMeldinger/inngangVarslinger/InngangVarslinger";
-import Tilbakebetaling from "../coronaVarsel/tilbakebetaling/Tilbakebetaling";
-import KoronaVarsel from "../coronaVarsel/tilbakebetaling/varsel/KoronaVarsel";
-import Utbetaling from "../utbetaling/Utbetaling";
-import LenkePanelVenstre from "../lenkepanelVenstre/LenkePanelVenstre";
-import LenkePanelHoyre from "../lenkepanelHoyre/LenkePanelHoyre";
 import Notifikasjoner from "../notifikasjoner/Notifikasjoner";
-import "./MainComponent.css";
-import GenerelleFliser from "../generelleFliser/GenerelleFliser";
+import "./MainPage.css";
+import InngangVarslinger from "../inngangVarslinger/InngangVarslinger";
+import Tilbakebetaling from "../fliser/coronaVarsel/tilbakebetaling/Tilbakebetaling";
+import KoronaVarsel from "../fliser/coronaVarsel/tilbakebetaling/varsel/KoronaVarsel";
+import Utbetaling from "../fliser/utbetaling/Utbetaling";
+import Sidetittel from "../sidetittel/Sidetittel";
+import LenkePanelVenstre from "../fliser/lenkepanelVenstre/LenkePanelVenstre";
+import GenerelleFliser from "../fliser/generelleFliser/GenerelleFliser";
+import LenkePanelHoyre from "../fliser/lenkepanelHoyre/LenkePanelHoyre";
 
-const MainComponent = () => {
+const MainPage = () => {
   return (
     <section className="page-wrapper">
       <Sidetittel />
@@ -36,4 +36,4 @@ const MainComponent = () => {
   );
 };
 
-export default MainComponent;
+export default MainPage;

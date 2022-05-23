@@ -1,10 +1,10 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { useIntl } from "react-intl";
-import { fetcher } from "../../api/api";
+import { fetcher } from "../../../api/api";
 import { LinkPanel, Link, Panel, Heading, Detail } from "@navikt/ds-react";
-import { mineSakerUrl, oppfolgingUrl, sakerApiUrl } from "../../api/urls";
-import i18n from "../../language/i18n";
+import { mineSakerUrl, sakerApiUrl } from "../../../api/urls";
+import i18n from "../../../language/i18n";
 import { Next } from "@navikt/ds-icons";
 import "./LenkePanelVenstre.css";
 

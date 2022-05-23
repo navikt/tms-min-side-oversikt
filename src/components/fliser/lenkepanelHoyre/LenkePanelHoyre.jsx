@@ -1,10 +1,10 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { useIntl } from "react-intl";
-import { fetcher } from "../../api/api";
+import { fetcher } from "../../../api/api";
 import { Link, Panel, Heading, Detail } from "@navikt/ds-react";
 import { Dialog, Email, Folder } from "@navikt/ds-icons";
-import { dialogMedVeilederUrl, innboksUrl, minInnboksUrl, oppfolgingUrl } from "../../api/urls";
+import { dialogMedVeilederUrl, innboksUrl, minInnboksUrl, oppfolgingUrl } from "../../../api/urls";
 import "./LenkePanelHoyre.css";
 
 const LenkePanelHoyre = () => {

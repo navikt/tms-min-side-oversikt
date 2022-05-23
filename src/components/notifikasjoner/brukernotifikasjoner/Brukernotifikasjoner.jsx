@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useIntl } from "react-intl";
-import MeldingsBoks from "../meldingsBoks/MeldingsBoks";
 import i18n from "../../../language/i18n";
 import { sortByEventTidspunkt } from "../../../utils/sorter";
 import isMasked from "../../../utils/isMasked";
 import useStore from "../../../store/store";
 import { selectRemoveBeskjed } from "../../../store/selectors";
 import { postDone, postDigisosDone } from "../../../api/api";
+import NotifikasjonsBoks from "../notifikasjonsBoks/NotifikasjonsBoks";
 
 const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks }) => {
   const translate = useIntl();
@@ -34,7 +34,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
         oppgaver
           ?.sort(sortByEventTidspunkt)
           .map((o) => (
-            <MeldingsBoks
+            <NotifikasjonsBoks
               key={o.eventId}
               tekst={o.tekst}
               dato={formatDateAndTime(o.eventTidspunkt)}
@@ -47,7 +47,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
         beskjeder
           .sort(sortByEventTidspunkt)
           .map((b) => (
-            <MeldingsBoks
+            <NotifikasjonsBoks
               key={b.eventId}
               tekst={b.tekst}
               dato={formatDateAndTime(b.eventTidspunkt)}
@@ -60,7 +60,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
           ))}
       {innboks &&
         innboks.map((i) => (
-          <MeldingsBoks
+          <NotifikasjonsBoks
             key={i.eventId}
             tekst={i.tekst}
             dato={formatDateAndTime(i.eventTidspunkt)}

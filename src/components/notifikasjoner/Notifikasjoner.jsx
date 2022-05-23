@@ -8,10 +8,10 @@ import {
   innloggingsstatusUrl,
   meldekortinfoApiUrl,
 } from "../../api/urls";
-import Brukernotifikasjoner from "../viktigeMeldinger/brukernotifikasjoner/Brukernotifikasjoner";
 import { selectAddBeskjederList, selectBeskjederList } from "../../store/selectors";
 import useStore from "../../store/store";
-import Meldekort from "../viktigeMeldinger/meldekort/Meldekort";
+import Meldekort from "../meldekort/Meldekort";
+import Brukernotifikasjoner from "./brukernotifikasjoner/Brukernotifikasjoner";
 
 const Notifikasjoner = () => {
   const { data: innloggingsstatus } = useQuery(innloggingsstatusUrl, fetcher);

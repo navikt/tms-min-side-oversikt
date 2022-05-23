@@ -1,7 +1,7 @@
 import React from "react";
 import { useIntl } from "react-intl";
 import { LinkPanel } from "@navikt/ds-react";
-import { utbetalingsoversiktUrl } from "../../api/urls";
+import { utbetalingsoversiktUrl } from "../../../api/urls";
 
 const Utbetaling = () => {
   const translate = useIntl();

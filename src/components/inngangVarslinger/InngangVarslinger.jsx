@@ -1,8 +1,8 @@
 import React from "react";
 import { useQuery } from "react-query";
-import { fetcher } from "../../../api/api";
+import { fetcher } from "../../api/api";
 import { useIntl } from "react-intl";
-import { inaktiveOppgaverApiUrl, inaktiveBeskjederApiUrl, inaktiveInnboksApiUrl } from "../../../api/urls";
+import { inaktiveOppgaverApiUrl, inaktiveBeskjederApiUrl, inaktiveInnboksApiUrl } from "../../api/urls";
 import { Button } from "@navikt/ds-react";
 import "./InngangVarslinger.css";
 

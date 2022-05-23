@@ -2,7 +2,7 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { LinkPanel } from "@navikt/ds-react";
 import "./Tilbakebetaling.css";
-import { tilbakebetalingsUrl } from "../../../api/urls";
+import { tilbakebetalingsUrl } from "../../../../api/urls";
 
 const Tilbakebetaling = () => {
   const translate = useIntl();

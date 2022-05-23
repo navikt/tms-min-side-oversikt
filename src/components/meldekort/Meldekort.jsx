@@ -1,8 +1,8 @@
 import React from "react";
 import { useIntl } from "react-intl";
-import { meldekortUrl } from "../../../api/urls";
-import i18n from "../../../language/i18n";
-import MeldingsBoks from "../meldingsBoks/MeldingsBoks";
+import { meldekortUrl } from "../../api/urls";
+import i18n from "../../language/i18n";
+import NotifikasjonsBoks from "../notifikasjoner/notifikasjonsBoks/NotifikasjonsBoks";
 
 const Meldekort = ({ meldekort }) => {
   const translate = useIntl();
@@ -64,7 +64,7 @@ const Meldekort = ({ meldekort }) => {
   return (
     <>
       {isMeldekortBruker ? (
-        <MeldingsBoks
+        <NotifikasjonsBoks
           tekst={isEtterregistrering ? overskriftIfEtterregistrering : overskrift}
           dato={isEtterregistrering ? "" : feriedager}
           type={isEtterregistrering ? "oppgave" : type}

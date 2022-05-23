@@ -82,3 +82,6 @@ export const sykefravaerUrl = `${navUrl}/syk/sykefravaer`;
 export const arbeidUrl = `${navUrl}/arbeid`;
 export const soknadUrl = `${navUrl}/soknader`;
 export const dinPensjonUrl = `${tjenesterUrl}/pselv/publisering/dinpensjon.jsf`;
+export const innboksUrl = "https://uat-navdialog.cs108.force.com/Innboks/s/";
+export const minInnboksUrl = "https://www.nav.no/no/ditt-nav/meldingene-dine-er-flyttet";
+export const dialogMedVeilederUrl = `${navUrl}/person/dittnav/veientilarbeid/dialog`;

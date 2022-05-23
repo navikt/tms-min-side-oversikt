@@ -4,7 +4,7 @@ import { useIntl } from "react-intl";
 import { fetcher } from "../../api/api";
 import { Link, Panel, Heading, Detail } from "@navikt/ds-react";
 import { Dialog, Email, Folder } from "@navikt/ds-icons";
-import { oppfolgingUrl } from "../../api/urls";
+import { dialogMedVeilederUrl, innboksUrl, minInnboksUrl, oppfolgingUrl } from "../../api/urls";
 import "./LenkePanelHoyre.css";
 
 const LenkePanelHoyre = () => {
@@ -18,7 +18,7 @@ const LenkePanelHoyre = () => {
       <Heading spacing level="2" size="small" className="tittel">
         {translate.formatMessage({ id: "lenkepanel.hoyre.tittel" })}
       </Heading>
-      <Link href={"https://innboks.nav.no"}>
+      <Link href={innboksUrl}>
         <Email />
         {translate.formatMessage({ id: "lenkepanel.hoyre.lenketekst.innboks" })}
       </Link>
@@ -27,7 +27,7 @@ const LenkePanelHoyre = () => {
       </Detail>
       {brukerUnderOppfolging ? (
         <>
-          <Link href={`${window.env.NAVNO_URL}/person/dittnav/veientilarbeid/dialog`}>
+          <Link href={dialogMedVeilederUrl}>
             <Dialog />
             {translate.formatMessage({ id: "lenkepanel.hoyre.lenketekst.dialog" })}
           </Link>
@@ -36,7 +36,7 @@ const LenkePanelHoyre = () => {
           </Detail>
         </>
       ) : null}
-      <Link href={"https://mininnboks.nav.no"}>
+      <Link href={minInnboksUrl}>
         <Folder />
         {translate.formatMessage({ id: "lenkepanel.hoyre.lenketekst.brevogvedtak" })}
       </Link>

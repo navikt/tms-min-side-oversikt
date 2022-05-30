@@ -1,6 +1,7 @@
 .brukernotifikasjon-wrapper {
   border: none;
   border-radius: 8px;
+  width: 37.5rem;
 }
 
 .brukernotifikasjon-tekst-wrapper {
@@ -23,6 +24,7 @@
 .beskjed-arkiver {
   display: flex;
   margin-bottom: 1rem;
+  width: 37.5rem;
 }
 
 .beskjed-arkiver-content {

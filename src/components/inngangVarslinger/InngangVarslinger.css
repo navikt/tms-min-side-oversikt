@@ -1,3 +1,9 @@
-.varslinger-button {
-  margin: 1rem 0 0 0 !important;
+.inngang-varslinger {
+  margin: 1rem 0 0 0;
+  text-decoration: underline;
+}
+
+.inngang-varslinger:hover {
+  text-decoration: none;
+  cursor: pointer;
 }

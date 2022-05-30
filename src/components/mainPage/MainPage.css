@@ -1,8 +1,12 @@
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
   color: #3e3832;
+}
+
+.heading-wrapper {
+  justify-content: flex-start;
 }
 
 .brukernotifikasjons-liste {

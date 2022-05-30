@@ -58,12 +58,8 @@
   font-size: 16px !important;
 }
 
-.beskjed-arkiver-knapp-ikon {
+.beskjed-arkiver-knapp {
   display: flex;
   align-self: center;
   justify-self: right;
-  min-width: 1.5rem;
-  width: 1.5rem;
-  min-height: 1.5rem;
-  height: 1.5rem;
 }

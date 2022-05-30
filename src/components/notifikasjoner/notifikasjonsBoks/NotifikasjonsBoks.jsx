@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import { BodyShort, Heading, LinkPanel, Panel } from "@navikt/ds-react";
-import { MinusCircle } from "@navikt/ds-icons";
 import OppgaveIkon from "../../../assets/OppgaveIkon";
+import OppgaveIkonInverted from "../../../assets/OppgaveIkonInverted";
 import BeskjedIkon from "../../../assets/BeskjedIkon";
+import BeskjedIkonInverted from "../../../assets/BeskjedIkonInverted";
+import ArkiverIkon from "../../../assets/ArkiverIkon";
+import ArkiverKnapp from "../../arkiverknapp/ArkiverKnapp";
 import { loginserviceStepUpUrl } from "../../../api/urls";
 import "./NotifikasjonsBoks.css";
 
 const NotifikasjonsBoks = ({ key, tekst, dato, href, type, isMasked, remove, beskjed }) => {
+  const [isInverted, setIsInverted] = useState(false);
+  const [showArkiverIkon, setShowArkiverIkon] = useState(false);
   const translate = useIntl();
   const isOppgave = type === "oppgave";
   const isInnboks = type === "innboks";
@@ -20,10 +25,33 @@ const NotifikasjonsBoks = ({ key, tekst, dato, href, type, isMasked, remove, bes
 
   const lenke = isMasked ? loginserviceStepUpUrl : href;
 
+  const handleNotifikasjonMouseEnter = () => {
+    setIsInverted(true);
+  };
+
+  const handleNotifikasjonMouseLeave = () => {
+    setIsInverted(false);
+  };
+
+  const handleArkiverknappMouseEnter = () => {
+    setShowArkiverIkon(true);
+  };
+
+  const handleArkiverknappMouseLeave = () => {
+    setShowArkiverIkon(false);
+  };
+
   return (
     <>
       {!isArkiverbarBeskjed ? (
-        <LinkPanel className="brukernotifikasjon-wrapper" href={lenke} border={false} key={key}>
+        <LinkPanel
+          className="brukernotifikasjon-wrapper"
+          href={lenke}
+          border={false}
+          key={key}
+          onMouseEnter={handleNotifikasjonMouseEnter}
+          onMouseLeave={handleNotifikasjonMouseLeave}
+        >
           <div
             style={{
               display: "grid",
@@ -32,7 +60,17 @@ const NotifikasjonsBoks = ({ key, tekst, dato, href, type, isMasked, remove, bes
               alignItems: "center",
             }}
           >
-            {isOppgave ? <OppgaveIkon /> : <BeskjedIkon />}
+            {isInverted ? (
+              isOppgave ? (
+                <OppgaveIkonInverted />
+              ) : (
+                <BeskjedIkonInverted />
+              )
+            ) : isOppgave ? (
+              <OppgaveIkon />
+            ) : (
+              <BeskjedIkon />
+            )}
             <div className="brukernotifikasjon-tekst-wrapper">
               <LinkPanel.Title className="brukernotifikasjon-tekst">{printTekst}</LinkPanel.Title>
               <LinkPanel.Description className="brukernotifikasjon-dato">
@@ -44,7 +82,7 @@ const NotifikasjonsBoks = ({ key, tekst, dato, href, type, isMasked, remove, bes
       ) : (
         <Panel className="beskjed-arkiver" onClick={() => remove(beskjed)} key={key}>
           <div className="beskjed-arkiver-content">
-            <BeskjedIkon />
+            {showArkiverIkon ? <ArkiverIkon /> : <BeskjedIkon />}
             <div className="beskjed-arkiver-tekst-wrapper">
               <Heading spacing level="2" size="medium">
                 {printTekst}
@@ -52,7 +90,11 @@ const NotifikasjonsBoks = ({ key, tekst, dato, href, type, isMasked, remove, bes
               <BodyShort>{dato}</BodyShort>
             </div>
           </div>
-          <MinusCircle className="beskjed-arkiver-knapp-ikon" />
+          <ArkiverKnapp
+            className="beskjed-arkiver-knapp"
+            mouseEnter={handleArkiverknappMouseEnter}
+            mouseLeave={handleArkiverknappMouseLeave}
+          />
         </Panel>
       )}
     </>

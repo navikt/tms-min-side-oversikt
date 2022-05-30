@@ -1,0 +1,10 @@
+.beskjed-arkiver-knapp {
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
+    border-radius: 2px;
+}
+
+.beskjed-arkiver-knapp:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

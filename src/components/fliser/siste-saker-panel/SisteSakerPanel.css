@@ -1,0 +1,10 @@
+.siste-saker-panel {
+    margin: 2rem 0 0 0;
+    width: 37.5rem;
+}
+
+.siste-saker-panel > div:first-of-type {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 0.4rem;
+}
+  

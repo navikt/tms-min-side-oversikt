@@ -9,12 +9,11 @@ import "./Sidetittel.css";
 const Sidetittel = () => {
   const { data: navn, isError: navnFailed } = useQuery(brukernavnApiUrl, fetcher);
   const { data: ident, isError: identFailed } = useQuery(identApiUrl, fetcher);
+  const translate = useIntl();
 
   if ((!navn && !ident) || identFailed) {
     return null;
   }
-
-  const translate = useIntl();
 
   const navnOrIdent = navnFailed ? ident?.ident : navn?.navn.toLowerCase();
 

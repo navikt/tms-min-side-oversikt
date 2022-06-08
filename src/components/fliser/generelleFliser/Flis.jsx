@@ -7,7 +7,7 @@ const Flis = ({ tittel, ingress, ikon, href }) => {
 
   return (
     <>
-      <LinkPanel href={href} border={false}>
+      <LinkPanel className="flis-komponent" href={href} border={false}>
         <div
           style={{
             display: "grid",

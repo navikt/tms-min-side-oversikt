@@ -12,8 +12,8 @@ const BeskjedIkonInverted = () => {
     >
       <circle cx="1.5rem" cy="1.5rem" r="1.5rem" fill="#CCE1FF" />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M30.6667 14C32.4518 14 33.9092 15.4033 33.9959 17.167L34 17.3333V26.5C34 28.2852 32.5967 29.7426 30.833 29.8293L30.6667 29.8333H19.8333L14 34V17.3333C14 15.5482 15.4033 14.0908 17.167 14.0041L17.3333 14H30.6667Z"
         fill="#0067C5"
       />

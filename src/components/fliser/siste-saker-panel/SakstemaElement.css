@@ -1,0 +1,40 @@
+.sakstema-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem 0;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.fil-ikon {
+    margin: 0 1rem 0 0 ;
+}
+
+.sakstema-lenke {
+    color: black !important;
+    text-decoration: none !important;
+    font-weight: bolder;
+}
+
+.sakstema-element:hover {
+    cursor: pointer;
+}
+
+.sakstema-element:hover > div > div > a{
+    text-decoration: underline !important;
+}
+
+.sakstema-element:hover > svg.chevron{
+    transition-duration: 0.2s;
+    transform: translate(3px, 0);
+}
+
+.chevron {
+    margin-left: 0.5rem;
+    overflow: visible;
+}
+

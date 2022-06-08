@@ -1,16 +1,19 @@
 import React from "react";
+import { useQuery } from "react-query";
+import { fetcher } from "../../api/api";
+import { oppfolgingUrl } from "../../api/urls";
 import Notifikasjoner from "../notifikasjoner/Notifikasjoner";
-import "./MainPage.css";
 import InngangVarslinger from "../inngangVarslinger/InngangVarslinger";
-import Tilbakebetaling from "../fliser/coronaVarsel/tilbakebetaling/Tilbakebetaling";
-import KoronaVarsel from "../fliser/coronaVarsel/tilbakebetaling/varsel/KoronaVarsel";
 import Utbetaling from "../fliser/utbetaling/Utbetaling";
 import Sidetittel from "../sidetittel/Sidetittel";
-import LenkePanelVenstre from "../fliser/lenkepanelVenstre/LenkePanelVenstre";
+import SisteSakerPanel from "../fliser/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "../fliser/generelleFliser/GenerelleFliser";
-import LenkePanelHoyre from "../fliser/lenkepanelHoyre/LenkePanelHoyre";
-
+import KommunikasjonsFlis from "../fliser/kommunikasjonsflis/KommunikasjonsFlis";
+import "./MainPage.css";
 const MainPage = () => {
+  const { data: oppfolging } = useQuery(oppfolgingUrl, fetcher);
+  const brukerUnderOppfolging = oppfolging?.erBrukerUnderOppfolging;
+
   return (
     <section className="page-wrapper">
       <Sidetittel />
@@ -18,18 +21,12 @@ const MainPage = () => {
         <Notifikasjoner />
       </section>
       <InngangVarslinger />
-      <section className="covid-container">
-        <Tilbakebetaling />
-        <KoronaVarsel />
-      </section>
       <section className="min-side-lenkepanel">
-        <section className="lenkepanel-venstre">
+        <section className={true ? "lenkepanel-stor-wrapper" : "lenkepanel-liten-wrapper"}>
           <Utbetaling />
-          <LenkePanelVenstre />
+          <KommunikasjonsFlis size={true ? "large" : "small"} />
         </section>
-        <section className="lenkepanel-hoyre">
-          <LenkePanelHoyre />
-        </section>
+        <SisteSakerPanel />
       </section>
       <GenerelleFliser />
     </section>

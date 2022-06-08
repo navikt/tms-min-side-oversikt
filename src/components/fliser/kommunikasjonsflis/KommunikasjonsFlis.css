@@ -1,0 +1,24 @@
+.kommunikasjonsflis-stor {
+    margin: 2rem 0 0 0;
+    width: 37.5rem;
+}
+
+.kommunikasjonsflis-stor > div:first-of-type {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 0.4rem;
+}
+
+.kommunikasjonsflis-liten {
+    width: 18.25rem;
+    font-size: 16px !important;
+    margin: 1rem 0 0 0;
+}
+
+.kommunikasjonsflis-liten-tittel {
+    font-size: 16px !important;
+}
+
+.fil-ikon {
+    margin: 0 2rem 0 0;
+    overflow: visible;
+}

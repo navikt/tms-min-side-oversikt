@@ -2,12 +2,12 @@ import { useIntl } from "react-intl";
 import { LinkPanel } from "@navikt/ds-react";
 import "./Flis.css";
 
-const Flis = ({ tittel, ingress, ikon, href }) => {
+const Flis = ({ tittel, ikon, href }) => {
   const translate = useIntl();
 
   return (
     <>
-      <LinkPanel href={href} border={false}>
+      <LinkPanel className="flis-komponent" href={href} border={false}>
         <div
           style={{
             display: "grid",
@@ -16,10 +16,11 @@ const Flis = ({ tittel, ingress, ikon, href }) => {
             alignItems: "center",
           }}
         >
-          {ikon}
+          <div className="flis-komponent-ikon">{ikon}</div>
           <div>
-            <LinkPanel.Title>{translate.formatMessage({ id: tittel })}</LinkPanel.Title>
-            <LinkPanel.Description>{translate.formatMessage({ id: ingress })}</LinkPanel.Description>
+            <LinkPanel.Title className="flis-komponent-tittel">
+              {translate.formatMessage({ id: tittel })}
+            </LinkPanel.Title>
           </div>
         </div>
       </LinkPanel>

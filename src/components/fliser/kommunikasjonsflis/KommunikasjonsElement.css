@@ -1,0 +1,43 @@
+.kommunikasjons-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem 0;
+}
+
+.kommunikasjons-lenke {
+    color: black !important;
+    text-decoration: none !important;
+    font-weight: bolder;
+}
+
+.dato-label {
+    margin-bottom: 0 !important;
+}
+
+.kommunikasjons-ikon-wrapper {
+    display: flex;
+    align-self: center;
+    overflow: visible;
+    padding: 1rem;
+    margin: 0 1rem 0 0.5rem;
+    background-color: #F7F7F7;
+    border-radius: 50%;
+}
+
+.kommunikasjons-element:hover {
+    cursor: pointer;
+}
+
+.kommunikasjons-element:hover > div > div > a{
+    text-decoration: underline !important;
+}
+
+.kommunikasjons-element:hover > svg{
+    transition-duration: 0.2s;
+    transform: translate(3px, 0);
+}
+
+.chevron {
+    margin-left: 0.5rem;
+}

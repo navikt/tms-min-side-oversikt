@@ -1,6 +1,19 @@
-.brukernotifikasjon-wrapper {
-  border: none;
+.oppgave-wrapper {
   border-radius: 8px;
+}
+
+.oppgave-wrapper-selected {
+  background-color: #FFD799 !important;
+  border: 1px solid transparent !important;
+}
+
+.beskjed-wrapper {
+  border-radius: 8px;
+}
+
+.beskjed-wrapper-selected {
+  background-color: #99C4DD !important;
+  border: 1px solid transparent !important;
 }
 
 .brukernotifikasjon-tekst-wrapper {
@@ -11,8 +24,11 @@
 
 .brukernotifikasjon-tekst {
   font-size: 18px !important;
-  font-weight: bold;
+  font-weight: bolder !important;
   margin-bottom: 0 !important;
+  text-decoration: none !important;
+  color: black !important;
+  line-height: normal !important;
 }
 
 .brukernotifikasjon-dato {
@@ -30,16 +46,48 @@
   justify-content: flex-start;
 }
 
-.beskjed-arkiver-ikon {
+.oppgave-ikon-wrapper {
   display: flex;
   align-self: center;
   overflow: visible;
+  padding: 1rem;
+  margin: 0 -1rem 0 0.5rem;
+  background-color: #FFF9F0;
+  border-radius: 50%;
+  color: #D47B00;
 }
 
-.oppgave-arkiver-ikon {
+.oppgave-ikon-wrapper-inverted {
   display: flex;
   align-self: center;
   overflow: visible;
+  padding: 1rem;
+  margin: 0 -1rem 0 0.5rem;
+  background-color: #FFF9F0;
+  border-radius: 50%;
+  color: #D47B00;
+}
+
+.beskjed-ikon-wrapper {
+  display: flex;
+  align-self: center;
+  overflow: visible;
+  padding: 1rem;
+  margin: 0 -1rem 0 0.5rem;
+  background-color: #E6F1F8;
+  border-radius: 50%;
+  color: #005B82;
+}
+
+.beskjed-ikon-wrapper-inverted {
+  display: flex;
+  align-self: center;
+  overflow: visible;
+  padding: 1rem;
+  margin: 0 -1rem 0 0.5rem;
+  background-color: #E6F1F8;
+  border-radius: 50%;
+  color: #005B82;
 }
 
 .beskjed-arkiver-tekst-wrapper {
@@ -58,12 +106,88 @@
   font-size: 16px !important;
 }
 
-.beskjed-arkiver-knapp-ikon {
+.beskjed-arkiver-ikon {
+  display: flex;
+  align-self: center;
+  overflow: visible;
+  padding: 1rem;
+  margin: 0 -1rem 0 0.5rem;
+  background-color: #E6F1F8;
+  border-radius: 50%;
+  color: #005B82;
+}
+
+.beskjed-arkiver-ikon-inverted {
+  display: flex;
+  align-self: center;
+  overflow: visible;
+  padding: 1rem;
+  margin: 0 -1rem 0 0.5rem;
+  background-color: #E6F1F8;
+  border-radius: 50%;
+  color: #005B82;
+}
+
+.beskjed-arkiver-knapp {
   display: flex;
   align-self: center;
   justify-self: right;
-  min-width: 1.5rem;
-  width: 1.5rem;
-  min-height: 1.5rem;
-  height: 1.5rem;
+}
+
+@media (min-width: 0px) {
+  .oppgave-wrapper {
+    width: 100%;
+    margin: 0 0.5rem 0 0.5rem;
+  }
+
+  .oppgave-wrapper-selected {
+    width: 100%;
+    margin: 0 0.5rem 0 0.5rem;
+  }
+  
+  .beskjed-wrapper {
+    width: 100%;
+    margin: 0 0.5rem 0 0.5rem;
+  }
+
+  .beskjed-wrapper-selected {
+    width: 100%;
+    margin: 0 0.5rem 0 0.5rem;
+  }
+
+  .beskjed-arkiver {
+    width: 100%;
+    margin: 0 0.5rem 1rem 0.5rem;
+  }
+}
+
+@media (min-width: 648px) {
+  .oppgave-wrapper {
+    width: 37.5rem;
+    margin: 0;
+  }
+
+  .oppgave-wrapper-selected {
+    width: 37.5rem;
+    margin: 0;
+  }
+  
+  .beskjed-wrapper {
+    width: 37.5rem;
+    margin: 0;
+  }
+
+  .beskjed-wrapper-selected {
+    width: 37.5rem;
+    margin: 0;
+  }
+
+  .beskjed-arkiver {
+    width: 37.5rem;
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media (min-width: 960px) {
+  
 }

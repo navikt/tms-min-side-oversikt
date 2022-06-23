@@ -1,16 +1,22 @@
 .heading-wrapper {
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
   margin-top: 2rem;
-}
-
-.person-logo {
-  width: 2.6rem;
-  height: 2.6rem;
-  margin-right: 2rem;
 }
 
 .person-tekst {
   text-transform: capitalize;
   margin: 0 !important;
+}
+
+@media (min-width: 0px) {
+  .heading-wrapper {
+    margin: 1rem 0 0 0.5rem;
+  }
+}
+
+@media (min-width: 648px) {
+  .heading-wrapper {
+    margin: 1rem 0 0 0.5rem;
+  }
 }

@@ -3,7 +3,6 @@ import { useQuery } from "react-query";
 import { fetcher } from "../../api/api";
 import { useIntl } from "react-intl";
 import { inaktiveOppgaverApiUrl, inaktiveBeskjederApiUrl, inaktiveInnboksApiUrl } from "../../api/urls";
-import { Button } from "@navikt/ds-react";
 import "./InngangVarslinger.css";
 
 const InngangVarslinger = () => {
@@ -19,9 +18,9 @@ const InngangVarslinger = () => {
   return (
     <>
       {skjulInngang ? null : (
-        <Button variant="secondary" size="medium" className="varslinger-button">
+        <a className="inngang-varslinger">
           {translate.formatMessage({ id: "dittnav.infomeldinger.inngang.varslinger" })}
-        </Button>
+        </a>
       )}
     </>
   );

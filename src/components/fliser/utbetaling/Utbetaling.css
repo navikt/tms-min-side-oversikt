@@ -1,0 +1,39 @@
+.utbetalings-flis {
+    font-size: 16px !important;
+}
+
+.utbetalings-ikon {
+    display: flex;
+    align-self: center;
+    overflow: visible;
+    padding: 1rem;
+    margin: 0 1rem 0 0.5rem;
+    background-color: #F7F7F7;
+    border-radius: 50%;
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+.utbetalings-tekst {
+    font-size: 16px !important;
+}
+
+@media (min-width: 0px) {
+    .utbetalings-flis {
+        width: 100%;
+        margin: 1rem 0.5rem 0 0.5rem;
+    }
+}
+
+@media (min-width: 648px) {
+    .utbetalings-flis {
+        width: 18.25rem;
+        margin: 2rem 1rem 0 0;
+    }
+}
+
+@media (min-width: 960px) {
+    
+}

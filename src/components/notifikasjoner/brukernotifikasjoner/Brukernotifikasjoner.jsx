@@ -35,7 +35,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
           ?.sort(sortByEventTidspunkt)
           .map((o) => (
             <NotifikasjonsBoks
-              key={o.eventId}
+              id={o.eventId}
               tekst={o.tekst}
               dato={formatDateAndTime(o.eventTidspunkt)}
               href={o.link}
@@ -48,7 +48,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
           .sort(sortByEventTidspunkt)
           .map((b) => (
             <NotifikasjonsBoks
-              key={b.eventId}
+              id={b.eventId}
               tekst={b.tekst}
               dato={formatDateAndTime(b.eventTidspunkt)}
               href={b.link}
@@ -61,7 +61,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
       {innboks &&
         innboks.map((i) => (
           <NotifikasjonsBoks
-            key={i.eventId}
+            id={i.eventId}
             tekst={i.tekst}
             dato={formatDateAndTime(i.eventTidspunkt)}
             href={i.link}

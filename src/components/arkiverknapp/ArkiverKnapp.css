@@ -1,0 +1,12 @@
+.beskjed-arkiver-knapp {
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
+    border-radius: 2px;
+    padding: 0.2rem;
+}
+
+.beskjed-arkiver-knapp:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #0067C5;
+}

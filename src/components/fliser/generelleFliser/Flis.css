@@ -1,4 +1,38 @@
-.generelle-fliser-ikon {
-    width: 1.75em;
-    height: 1.75em;
+.flis-komponent {
+    width: 24.5rem;
+}
+
+.flis-komponent-tittel {
+    font-size: 16px !important;
+}
+
+.flis-komponent-ingress {
+    font-size: 16px !important;
+}
+
+.flis-komponent-ikon {
+    display: flex;
+    align-self: center;
+    overflow: visible;
+    padding: 1rem;
+    margin: 0 -0.5rem 0 0.5rem;
+    background-color: #F7F7F7;
+    border-radius: 50%;
+}
+
+@media (min-width: 0px) {
+    .flis-komponent {
+        width: 100%;
+        margin: 0 0.5rem 0 0.5rem;
+    }
+}
+
+@media (min-width: 648px) {
+    .flis-komponent {
+        margin: 0;
+    }
+}
+
+@media (min-width: 960px) {
+    
 }

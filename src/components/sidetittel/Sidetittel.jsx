@@ -1,14 +1,15 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { fetcher } from "../../api/api";
+import { useIntl } from "react-intl";
 import { brukernavnApiUrl, identApiUrl } from "../../api/urls";
-import { People } from "@navikt/ds-icons";
 import { Heading } from "@navikt/ds-react";
 import "./Sidetittel.css";
 
 const Sidetittel = () => {
   const { data: navn, isError: navnFailed } = useQuery(brukernavnApiUrl, fetcher);
   const { data: ident, isError: identFailed } = useQuery(identApiUrl, fetcher);
+  const translate = useIntl();
 
   if ((!navn && !ident) || identFailed) {
     return null;
@@ -18,8 +19,8 @@ const Sidetittel = () => {
 
   return (
     <section className="heading-wrapper">
-      <People className="person-logo" />
       <Heading spacing size="xlarge" level="2" className="person-tekst">
+        {translate.formatMessage({ id: "sidetittel.hilsning" })}
         {navnOrIdent}
       </Heading>
     </section>

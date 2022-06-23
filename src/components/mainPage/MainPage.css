@@ -19,6 +19,7 @@
 
 .lenkepanel-liten-wrapper {
   display: flex;
+  margin-bottom: 2rem;
 }
 
 .lenkepanel-stor-wrapper {
@@ -26,12 +27,22 @@
   flex-direction: column;
 }
 
+.navds-link-panel__chevron {
+  width: 18px;
+  height: 18px;
+}
+
 
 @media (min-width: 0px) {
-
+  .lenkepanel-liten-wrapper {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 648px) {
+  .lenkepanel-liten-wrapper {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 960px) {

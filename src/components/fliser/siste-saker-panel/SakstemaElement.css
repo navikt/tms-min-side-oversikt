@@ -10,8 +10,18 @@
     align-items: center;
 }
 
-.fil-ikon {
-    margin: 0 1rem 0 0 ;
+.dato-label {
+    margin-bottom: 0 !important;
+}
+
+.sakstema-ikon {
+    display: flex;
+    align-self: center;
+    overflow: visible;
+    padding: 1rem;
+    margin: 0 1rem 0 0.5rem;
+    background-color: #F7F7F7;
+    border-radius: 50%;
 }
 
 .sakstema-lenke {

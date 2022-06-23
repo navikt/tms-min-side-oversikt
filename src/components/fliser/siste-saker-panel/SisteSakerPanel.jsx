@@ -6,6 +6,7 @@ import { LinkPanel, Panel, Heading } from "@navikt/ds-react";
 import { mineSakerUrl, sakerApiUrl } from "../../../api/urls";
 import SakstemaElement from "./SakstemaElement";
 import "./SisteSakerPanel.css";
+import { FileContent } from "@navikt/ds-icons";
 
 const SisteSakerPanel = () => {
   const { data: saker } = useQuery(sakerApiUrl, fetcher);
@@ -26,8 +27,22 @@ const SisteSakerPanel = () => {
           ))}
         </Panel>
       ) : (
-        <LinkPanel href={mineSakerUrl} border={false} className="lenkepanel-venstre-liten">
-          <LinkPanel.Title>{translate.formatMessage({ id: "dine.siste.saker" })}</LinkPanel.Title>
+        <LinkPanel href={mineSakerUrl} border={false} className="siste-saker-panel-liten">
+          <div
+            style={{
+              display: "grid",
+              gridAutoFlow: "column",
+              gap: "var(--navds-spacing-8)",
+              alignItems: "center",
+            }}
+          >
+            <div className="siste-saker-panel-ikon">
+              <FileContent />
+            </div>
+            <LinkPanel.Title className="siste-saker-panel-liten-tittel">
+              {translate.formatMessage({ id: "dine.siste.saker" })}
+            </LinkPanel.Title>
+          </div>
         </LinkPanel>
       )}
     </>

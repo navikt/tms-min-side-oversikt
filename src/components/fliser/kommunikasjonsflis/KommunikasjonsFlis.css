@@ -1,6 +1,5 @@
 .kommunikasjonsflis-stor {
     margin: 2rem 0 0 0;
-    width: 37.5rem;
 }
 
 .kommunikasjonsflis-stor > div:first-of-type {
@@ -9,9 +8,7 @@
 }
 
 .kommunikasjonsflis-liten {
-    width: 18.25rem;
     font-size: 16px !important;
-    margin: 1rem 0 0 0;
 }
 
 .kommunikasjonsflis-liten-tittel {
@@ -21,4 +18,37 @@
 .fil-ikon {
     margin: 0 2rem 0 0;
     overflow: visible;
+}
+
+@media (min-width: 0px) {
+    .kommunikasjonsflis-stor {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 1rem 0.5rem 0 0.5rem;
+    }
+
+    .kommunikasjonsflis-liten {
+        width: 100%;
+        margin: 1rem 0.5rem 0 0.5rem;
+    }
+}
+
+@media (min-width: 648px) {
+    .kommunikasjonsflis-stor {
+        display: block;
+        width: 37.5rem;
+        margin: 1rem 0 0 0;
+    }
+
+    .kommunikasjonsflis-liten {
+        width: 18.25rem;
+        margin: 2rem 0 0 0;
+    }
+
+    
+}
+
+@media (min-width: 960px) {
+    
 }

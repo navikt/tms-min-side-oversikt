@@ -1,9 +1,21 @@
 .inngang-varslinger {
-  margin: 1rem 0 0 0;
   text-decoration: underline;
+  color: black;
 }
 
 .inngang-varslinger:hover {
   text-decoration: none;
   cursor: pointer;
+}
+
+@media (min-width: 0px) {
+  .inngang-varslinger {
+    margin: 1rem 0 0 0.5rem;
+  }
+}
+
+@media (min-width: 648px) {
+  .inngang-varslinger {
+    margin: 1rem 0 0 0.5rem;
+  }
 }

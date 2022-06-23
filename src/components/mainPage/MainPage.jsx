@@ -22,13 +22,13 @@ const MainPage = () => {
       </section>
       <InngangVarslinger />
       <section className="min-side-lenkepanel">
-        <section className={true ? "lenkepanel-stor-wrapper" : "lenkepanel-liten-wrapper"}>
+        <section className={brukerUnderOppfolging ? "lenkepanel-stor-wrapper" : "lenkepanel-liten-wrapper"}>
           <Utbetaling />
-          <KommunikasjonsFlis size={true ? "large" : "small"} />
+          <KommunikasjonsFlis size={brukerUnderOppfolging ? "large" : "small"} />
         </section>
         <SisteSakerPanel />
       </section>
-      <GenerelleFliser />
+      {brukerUnderOppfolging ? <GenerelleFliser /> : null}
     </section>
   );
 };

@@ -3,8 +3,7 @@ import { useIntl } from "react-intl";
 import { LinkPanel, Panel, Heading } from "@navikt/ds-react";
 import { dialogMedVeilederUrl, innboksUrl, mineSakerUrl } from "../../../api/urls";
 import KommunikasjonsElement from "./KommunikasjonsElement";
-import BrevIkon from "../../../assets/BrevIkon";
-import DialogIkon from "../../../assets/DialogIkon";
+import { DialogDots, Email } from "@navikt/ds-icons";
 import "./KommunikasjonsFlis.css";
 
 const KommunikasjonsFlis = ({ size }) => {
@@ -20,19 +19,21 @@ const KommunikasjonsFlis = ({ size }) => {
             href={innboksUrl}
             tittel="lenkepanel.hoyre.lenketekst.innboks"
             ingress="lenkepanel.hoyre.ingress.innboks"
-            ikon={<BrevIkon />}
+            ikon={<Email />}
           />
           <KommunikasjonsElement
             href={dialogMedVeilederUrl}
             tittel="lenkepanel.hoyre.lenketekst.dialog"
             ingress="lenkepanel.hoyre.ingress.dialog"
-            ikon={<DialogIkon />}
+            ikon={<DialogDots />}
           />
         </Panel>
       ) : (
         <LinkPanel href={mineSakerUrl} border={false} className="kommunikasjonsflis-liten">
           <div className="content-wrapper">
-            <BrevIkon />
+            <div className="kommunikasjons-ikon-wrapper">
+              <Email />
+            </div>
             <LinkPanel.Title className="kommunikasjonsflis-liten-tittel">
               {translate.formatMessage({ id: "lenkepanel.hoyre.lenketekst.innboks" })}
             </LinkPanel.Title>

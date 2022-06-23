@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import { BodyShort, Heading, LinkPanel, Panel } from "@navikt/ds-react";
-import OppgaveIkon from "../../../assets/OppgaveIkon";
-import OppgaveIkonInverted from "../../../assets/OppgaveIkonInverted";
-import BeskjedIkon from "../../../assets/BeskjedIkon";
-import BeskjedIkonInverted from "../../../assets/BeskjedIkonInverted";
-import ArkiverIkon from "../../../assets/ArkiverIkon";
 import ArkiverKnapp from "../../arkiverknapp/ArkiverKnapp";
 import { loginserviceStepUpUrl } from "../../../api/urls";
 import "./NotifikasjonsBoks.css";
+import { FileFolder, SpeechBubble, Task } from "@navikt/ds-icons";
 
-const NotifikasjonsBoks = ({ key, tekst, dato, href, type, isMasked, remove, beskjed }) => {
-  const [isInverted, setIsInverted] = useState(false);
+const NotifikasjonsBoks = ({ id, tekst, dato, href, type, isMasked, remove, beskjed }) => {
+  const [isSelected, setIsSelected] = useState(false);
   const [showArkiverIkon, setShowArkiverIkon] = useState(false);
   const translate = useIntl();
   const isOppgave = type === "oppgave";
@@ -26,11 +22,11 @@ const NotifikasjonsBoks = ({ key, tekst, dato, href, type, isMasked, remove, bes
   const lenke = isMasked ? loginserviceStepUpUrl : href;
 
   const handleNotifikasjonMouseEnter = () => {
-    setIsInverted(true);
+    setIsSelected(true);
   };
 
   const handleNotifikasjonMouseLeave = () => {
-    setIsInverted(false);
+    setIsSelected(false);
   };
 
   const handleArkiverknappMouseEnter = () => {
@@ -45,10 +41,18 @@ const NotifikasjonsBoks = ({ key, tekst, dato, href, type, isMasked, remove, bes
     <>
       {!isArkiverbarBeskjed ? (
         <LinkPanel
-          className="brukernotifikasjon-wrapper"
+          className={
+            isSelected
+              ? isOppgave
+                ? "oppgave-wrapper-selected"
+                : "beskjed-wrapper-selected"
+              : isOppgave
+              ? "oppgave-wrapper"
+              : "beskjed-wrapper"
+          }
           href={lenke}
           border={false}
-          key={key}
+          key={id}
           onMouseEnter={handleNotifikasjonMouseEnter}
           onMouseLeave={handleNotifikasjonMouseLeave}
         >
@@ -60,17 +64,19 @@ const NotifikasjonsBoks = ({ key, tekst, dato, href, type, isMasked, remove, bes
               alignItems: "center",
             }}
           >
-            {isInverted ? (
-              isOppgave ? (
-                <OppgaveIkonInverted />
-              ) : (
-                <BeskjedIkonInverted />
-              )
-            ) : isOppgave ? (
-              <OppgaveIkon />
-            ) : (
-              <BeskjedIkon />
-            )}
+            <div
+              className={
+                isSelected
+                  ? isOppgave
+                    ? "oppgave-ikon-wrapper-inverted"
+                    : "beskjed-ikon-wrapper-inverted"
+                  : isOppgave
+                  ? "oppgave-ikon-wrapper"
+                  : "beskjed-ikon-wrapper"
+              }
+            >
+              {isOppgave ? <Task /> : <SpeechBubble />}
+            </div>
             <div className="brukernotifikasjon-tekst-wrapper">
               <LinkPanel.Title className="brukernotifikasjon-tekst">{printTekst}</LinkPanel.Title>
               <LinkPanel.Description className="brukernotifikasjon-dato">
@@ -80,11 +86,13 @@ const NotifikasjonsBoks = ({ key, tekst, dato, href, type, isMasked, remove, bes
           </div>
         </LinkPanel>
       ) : (
-        <Panel className="beskjed-arkiver" onClick={() => remove(beskjed)} key={key}>
+        <Panel className="beskjed-arkiver" onClick={() => remove(beskjed)} key={id}>
           <div className="beskjed-arkiver-content">
-            {showArkiverIkon ? <ArkiverIkon /> : <BeskjedIkon />}
+            <div className={showArkiverIkon ? "beskjed-arkiver-ikon-inverted" : "beskjed-arkiver-ikon"}>
+              {showArkiverIkon ? <FileFolder /> : <SpeechBubble />}
+            </div>
             <div className="beskjed-arkiver-tekst-wrapper">
-              <Heading spacing level="2" size="medium">
+              <Heading spacing level="2" size="medium" className="brukernotifikasjon-tekst">
                 {printTekst}
               </Heading>
               <BodyShort>{dato}</BodyShort>

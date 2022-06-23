@@ -3,7 +3,6 @@ import { Link, Detail } from "@navikt/ds-react";
 import { Next, FileContent } from "@navikt/ds-icons";
 import i18n from "../../../language/i18n";
 import "./SakstemaElement.css";
-import FilIkon from "../../../assets/FilIkon";
 
 const SakstemaElement = ({ href, sakstema, sistEndret }) => {
   const translate = useIntl();
@@ -12,7 +11,9 @@ const SakstemaElement = ({ href, sakstema, sistEndret }) => {
   return (
     <div className="sakstema-element">
       <div className="content-wrapper">
-        <FilIkon />
+        <div className="sakstema-ikon">
+          <FileContent />
+        </div>
         <div>
           <Link href={href} className="sakstema-lenke">
             {sakstema}

@@ -9,7 +9,7 @@ const KommunikasjonsElement = ({ href, tittel, ingress, ikon }) => {
   return (
     <div className="kommunikasjons-element">
       <div className="content-wrapper">
-        {ikon}
+        <div className="kommunikasjons-ikon-wrapper">{ikon}</div>
         <div>
           <Link href={href} className="kommunikasjons-lenke">
             {translate.formatMessage({ id: tittel })}

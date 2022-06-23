@@ -69,6 +69,7 @@ const Meldekort = ({ meldekort }) => {
           dato={isEtterregistrering ? "" : feriedager}
           type={isEtterregistrering ? "oppgave" : type}
           href={meldekortUrl}
+          id="meldekort-notifikasjon"
         />
       ) : null}
     </>

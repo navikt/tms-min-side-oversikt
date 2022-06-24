@@ -1,5 +1,5 @@
-const isMasked = (innloggingsstatus, sikkerhetsnivaa) => {
-  return sikkerhetsnivaa === 4 && innloggingsstatus === 3;
+const isMasked = (tekst) => {
+  return tekst === "***";
 };
 
 export default isMasked;

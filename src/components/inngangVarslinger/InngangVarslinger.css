@@ -10,12 +10,12 @@
 
 @media (min-width: 0px) {
   .inngang-varslinger {
-    margin: 1rem 0 0 0.5rem;
+    margin: 0.5rem 0 0 0.5rem;
   }
 }
 
 @media (min-width: 648px) {
   .inngang-varslinger {
-    margin: 1rem 0 0 0.5rem;
+    margin: 0.5rem 0 0 0.5rem;
   }
 }

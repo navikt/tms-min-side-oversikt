@@ -28,7 +28,7 @@ const MainPage = () => {
         </section>
         <SisteSakerPanel />
       </section>
-      {brukerUnderOppfolging ? <GenerelleFliser /> : null}
+      {brukerUnderOppfolging ? null : <GenerelleFliser />}
     </section>
   );
 };

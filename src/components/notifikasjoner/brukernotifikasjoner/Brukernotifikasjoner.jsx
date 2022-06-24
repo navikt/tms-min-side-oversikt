@@ -40,7 +40,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
               dato={formatDateAndTime(o.eventTidspunkt)}
               href={o.link}
               type="oppgave"
-              isMasked={isMasked(innloggingsstatus, o?.sikkerhetsnivaa)}
+              isMasked={isMasked(o?.tekst)}
             />
           ))}
       {beskjeder &&
@@ -53,7 +53,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
               dato={formatDateAndTime(b.eventTidspunkt)}
               href={b.link}
               type="beskjed"
-              isMasked={isMasked(innloggingsstatus, b.sikkerhetsnivaa)}
+              isMasked={isMasked(b?.tekst)}
               remove={remove}
               beskjed={b}
             />
@@ -66,7 +66,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
             dato={formatDateAndTime(i.eventTidspunkt)}
             href={i.link}
             type="beskjed"
-            isMasked={isMasked(innloggingsstatus, i.sikkerhetsnivaa)}
+            isMasked={isMasked(i?.tekst)}
           />
         ))}
     </>

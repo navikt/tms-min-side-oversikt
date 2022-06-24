@@ -19,9 +19,14 @@ const SisteSakerPanel = () => {
     <>
       {visStortSakspanel ? (
         <Panel className="siste-saker-panel">
-          <Heading spacing level="2" size="small">
-            {translate.formatMessage({ id: "lenkepanel.venstre.tittel" })}
-          </Heading>
+          <div className="siste-saker-panel-heading">
+            <Heading spacing level="2" size="small">
+              {translate.formatMessage({ id: "lenkepanel.venstre.tittel" })}
+            </Heading>
+            <a className="se-alle-saker-inngang" href={mineSakerUrl}>
+              Se alle
+            </a>
+          </div>
           {saker?.sakstemaer.slice(0, 2).map((sak) => (
             <SakstemaElement href={sak.detaljvisningUrl} sakstema={sak.navn} sistEndret={sak.sistEndret} />
           ))}

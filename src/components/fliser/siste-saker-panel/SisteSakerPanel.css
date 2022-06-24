@@ -1,6 +1,23 @@
-.siste-saker-panel > div:nth-of-type(2) {
+.siste-saker-panel-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.se-alle-saker-inngang {
+    margin-right: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.se-alle-saker-inngang:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.siste-saker-panel > div:nth-of-type(3) {
     border-top: 1px solid lightgray;
     margin-bottom: 0.4rem;
+    padding: 1rem 1rem 0 0;
 }
 
 .siste-saker-panel-ikon {
@@ -31,12 +48,12 @@
 
 @media (min-width: 648px) {
     .siste-saker-panel {
-        margin: 2rem 0 0 0;
+        margin: 3rem 0 0 0;
         width: 37.5rem;
     }
 
     .siste-saker-panel-liten {
-        margin: 2rem 0 0 0;
+        margin: 3rem 0 0 0;
         width: 37.5rem;
     }
 }

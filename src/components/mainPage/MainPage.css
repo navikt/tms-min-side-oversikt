@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  color: #3e3832;
+  color: #272727;
 }
 
 .heading-wrapper {
@@ -14,12 +14,11 @@
 }
 
 .brukernotifikasjons-liste > a {
-  margin-bottom: 1rem;
+  margin-bottom: 4px;
 }
 
 .lenkepanel-liten-wrapper {
   display: flex;
-  margin-bottom: 2rem;
 }
 
 .lenkepanel-stor-wrapper {
@@ -43,8 +42,4 @@
   .lenkepanel-liten-wrapper {
     flex-direction: row;
   }
-}
-
-@media (min-width: 960px) {
-
 }

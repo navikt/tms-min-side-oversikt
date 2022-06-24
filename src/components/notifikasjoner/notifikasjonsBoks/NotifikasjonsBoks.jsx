@@ -95,7 +95,7 @@ const NotifikasjonsBoks = ({ id, tekst, dato, href, type, isMasked, remove, besk
               <Heading spacing level="2" size="medium" className="brukernotifikasjon-tekst">
                 {printTekst}
               </Heading>
-              <BodyShort>{dato}</BodyShort>
+              <BodyShort className="brukernotifikasjon-dato">{dato}</BodyShort>
             </div>
           </div>
           <ArkiverKnapp

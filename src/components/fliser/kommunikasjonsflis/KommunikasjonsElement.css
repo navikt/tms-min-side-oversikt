@@ -6,13 +6,14 @@
 }
 
 .kommunikasjons-lenke {
-    color: black !important;
+    color: #272727 !important;
     text-decoration: none !important;
     font-weight: bolder;
 }
 
 .dato-label {
     margin-bottom: 0 !important;
+    color: #707070;
 }
 
 .kommunikasjons-ikon-wrapper {

@@ -1,8 +1,14 @@
 import React from "react";
+import { Link, Router } from "react-router-dom";
 import { useQuery } from "react-query";
 import { fetcher } from "../../api/api";
 import { useIntl } from "react-intl";
-import { inaktiveOppgaverApiUrl, inaktiveBeskjederApiUrl, inaktiveInnboksApiUrl } from "../../api/urls";
+import {
+  inaktiveOppgaverApiUrl,
+  inaktiveBeskjederApiUrl,
+  inaktiveInnboksApiUrl,
+  minSideVarslingerUrl,
+} from "../../api/urls";
 import "./InngangVarslinger.css";
 
 const InngangVarslinger = () => {
@@ -18,7 +24,7 @@ const InngangVarslinger = () => {
   return (
     <>
       {skjulInngang ? null : (
-        <a className="inngang-varslinger">
+        <a className="inngang-varslinger" href={minSideVarslingerUrl}>
           {translate.formatMessage({ id: "dittnav.infomeldinger.inngang.varslinger" })}
         </a>
       )}

@@ -15,7 +15,7 @@ const MainPage = () => {
   const brukerUnderOppfolging = oppfolging?.erBrukerUnderOppfolging;
 
   return (
-    <section className="page-wrapper">
+    <section className="page-wrapper-microfrontend">
       <Sidetittel />
       <section className="brukernotifikasjons-liste">
         <Notifikasjoner />

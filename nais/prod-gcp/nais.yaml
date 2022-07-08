@@ -24,6 +24,7 @@ spec:
     max: 4
   ingresses:
     - "https://person.intern.nav.no/tms-min-side-oversikt"
+    - "https://www.nav.no/tms-min-side-oversikt"
   resources:
     limits:
       cpu: "3"

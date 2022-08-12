@@ -10,6 +10,7 @@ import SisteSakerPanel from "../fliser/siste-saker-panel/SisteSakerPanel";
 import GenerelleFliser from "../fliser/generelleFliser/GenerelleFliser";
 import KommunikasjonsFlis from "../fliser/kommunikasjonsflis/KommunikasjonsFlis";
 import "./MainPage.css";
+
 const MainPage = () => {
   const { data: oppfolging } = useQuery(oppfolgingUrl, fetcher);
   const brukerUnderOppfolging = oppfolging?.erBrukerUnderOppfolging;
@@ -21,14 +22,6 @@ const MainPage = () => {
         <Notifikasjoner />
       </section>
       <InngangVarslinger />
-      <section className="min-side-lenkepanel">
-        <section className={brukerUnderOppfolging ? "lenkepanel-stor-wrapper" : "lenkepanel-liten-wrapper"}>
-          <Utbetaling />
-          <KommunikasjonsFlis size={brukerUnderOppfolging ? "large" : "small"} />
-        </section>
-        <SisteSakerPanel />
-      </section>
-      {brukerUnderOppfolging ? null : <GenerelleFliser />}
     </section>
   );
 };

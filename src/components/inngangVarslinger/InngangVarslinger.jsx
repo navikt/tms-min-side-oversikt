@@ -10,6 +10,7 @@ import {
   minSideVarslingerUrl,
 } from "../../api/urls";
 import "./InngangVarslinger.css";
+import { komponent, logAmplitudeEvent } from "../../utils/amplitude";
 
 const InngangVarslinger = () => {
   const { data: inaktiveOppgaver } = useQuery(inaktiveOppgaverApiUrl, fetcher);
@@ -24,7 +25,11 @@ const InngangVarslinger = () => {
   return (
     <>
       {skjulInngang ? null : (
-        <a className="inngang-varslinger" href={minSideVarslingerUrl}>
+        <a
+          className="inngang-varslinger"
+          href={minSideVarslingerUrl}
+          onClick={() => logAmplitudeEvent(komponent.inngangVarslinger)}
+        >
           {translate.formatMessage({ id: "dittnav.infomeldinger.inngang.varslinger" })}
         </a>
       )}

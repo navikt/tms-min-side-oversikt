@@ -5,6 +5,7 @@ import ArkiverKnapp from "../../arkiverknapp/ArkiverKnapp";
 import { loginserviceStepUpUrl } from "../../../api/urls";
 import "./NotifikasjonsBoks.css";
 import { FileFolder, SpeechBubble, Task } from "@navikt/ds-icons";
+import { logAmplitudeEvent } from "../../../utils/amplitude";
 
 const NotifikasjonsBoks = ({ id, tekst, dato, href, type, isMasked, remove, beskjed }) => {
   const [isSelected, setIsSelected] = useState(false);
@@ -55,6 +56,7 @@ const NotifikasjonsBoks = ({ id, tekst, dato, href, type, isMasked, remove, besk
           key={id}
           onMouseEnter={handleNotifikasjonMouseEnter}
           onMouseLeave={handleNotifikasjonMouseLeave}
+          onClick={logAmplitudeEvent(isOppgave ? "Oppgave" : "Beskjed")}
         >
           <div
             style={{
@@ -86,7 +88,7 @@ const NotifikasjonsBoks = ({ id, tekst, dato, href, type, isMasked, remove, besk
           </div>
         </LinkPanel>
       ) : (
-        <Panel className="beskjed-arkiver" onClick={() => remove(beskjed)} key={id}>
+        <Panel className="beskjed-arkiver" key={id}>
           <div className="beskjed-arkiver-content">
             <div className={showArkiverIkon ? "beskjed-arkiver-ikon-inverted" : "beskjed-arkiver-ikon"}>
               {showArkiverIkon ? <FileFolder /> : <SpeechBubble />}
@@ -102,6 +104,8 @@ const NotifikasjonsBoks = ({ id, tekst, dato, href, type, isMasked, remove, besk
             className="beskjed-arkiver-knapp"
             mouseEnter={handleArkiverknappMouseEnter}
             mouseLeave={handleArkiverknappMouseLeave}
+            remove={remove}
+            beskjed={beskjed}
           />
         </Panel>
       )}

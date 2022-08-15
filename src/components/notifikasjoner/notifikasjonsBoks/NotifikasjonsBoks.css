@@ -53,9 +53,9 @@
   overflow: visible;
   padding: 1rem;
   margin: 0 -1rem 0 0.5rem;
-  background-color: #FFF9F0;
+  background-color: #FFECCC;
   border-radius: 50%;
-  color: #D47B00;
+  color: #262626;
 }
 
 .oppgave-ikon-wrapper-inverted {
@@ -64,9 +64,9 @@
   overflow: visible;
   padding: 1rem;
   margin: 0 -1rem 0 0.5rem;
-  background-color: #FFF9F0;
+  background-color: #FFECCC;
   border-radius: 50%;
-  color: #D47B00;
+  color: #262626;
 }
 
 .beskjed-ikon-wrapper {
@@ -75,9 +75,9 @@
   overflow: visible;
   padding: 1rem;
   margin: 0 -1rem 0 0.5rem;
-  background-color: #E6F1F8;
+  background-color: #CCE2F0;
   border-radius: 50%;
-  color: #005B82;
+  color: #262626;
 }
 
 .beskjed-ikon-wrapper-inverted {
@@ -86,9 +86,9 @@
   overflow: visible;
   padding: 1rem;
   margin: 0 -1rem 0 0.5rem;
-  background-color: #E6F1F8;
+  background-color: #CCE2F0;
   border-radius: 50%;
-  color: #005B82;
+  color: #262626;
 }
 
 .beskjed-arkiver-tekst-wrapper {
@@ -113,9 +113,9 @@
   overflow: visible;
   padding: 1rem;
   margin: 0 -1rem 0 0.5rem;
-  background-color: #E6F1F8;
+  background-color: #CCE2F0;
   border-radius: 50%;
-  color: #005B82;
+  color: #262626;
 }
 
 .beskjed-arkiver-ikon-inverted {
@@ -124,9 +124,9 @@
   overflow: visible;
   padding: 1rem;
   margin: 0 -1rem 0 0.5rem;
-  background-color: #E6F1F8;
+  background-color: #CCE2F0;
   border-radius: 50%;
-  color: #005B82;
+  color: #262626;
 }
 
 .beskjed-arkiver-knapp {

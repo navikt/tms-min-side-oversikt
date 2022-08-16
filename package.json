@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
+    "lint": "eslint --fix --ext .js,.jsx .",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
@@ -29,6 +30,8 @@
     "@testing-library/react": "12.1.2",
     "@testing-library/user-event": "13.5.0",
     "@vitejs/plugin-react": "1.0.7",
+    "eslint": "^8.22.0",
+    "eslint-plugin-react": "^7.30.1",
     "husky": "7.0.0",
     "jsdom": "19.0.0",
     "pretty-quick": "3.1.3",

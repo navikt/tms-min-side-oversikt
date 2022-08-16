@@ -25,13 +25,17 @@ const InngangVarslinger = () => {
   return (
     <>
       {skjulInngang ? null : (
-        <a
-          className="inngang-varslinger"
-          href={minSideVarslingerUrl}
-          onClick={() => logAmplitudeEvent(komponent.inngangVarslinger)}
-        >
-          {translate.formatMessage({ id: "dittnav.infomeldinger.inngang.varslinger" })}
-        </a>
+        <div>
+          <a
+            className="inngang-varslinger"
+            href={minSideVarslingerUrl}
+            onClick={() => logAmplitudeEvent(komponent.inngangVarslinger)}
+          >
+            {translate.formatMessage({ id: "dittnav.infomeldinger.inngang.varslinger" })}
+          </a>
+          <Link to="/varslinger">Test link</Link>
+          <Link to="/minside/varslinger">Test link</Link>
+        </div>
       )}
     </>
   );

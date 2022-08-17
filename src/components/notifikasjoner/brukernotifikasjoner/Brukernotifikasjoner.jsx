@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useIntl } from "react-intl";
 import i18n from "../../../language/i18n";
 import { sortByEventTidspunkt } from "../../../utils/sorter";
 import isMasked from "../../../utils/isMasked";
 import useStore from "../../../store/store";
 import { selectRemoveBeskjed } from "../../../store/selectors";
-import { postDone, postDigisosDone } from "../../../api/api";
+import { postDigisosDone, postDone } from "../../../api/api";
 import NotifikasjonsBoks from "../notifikasjonsBoks/NotifikasjonsBoks";
 
 const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks }) => {

@@ -1,16 +1,15 @@
 import React from "react";
 import { useIntl } from "react-intl";
-import i18n from "../../../language/i18n";
 import { sortByEventTidspunkt } from "../../../utils/sorter";
 import isMasked from "../../../utils/isMasked";
 import useStore from "../../../store/store";
 import { selectRemoveBeskjed } from "../../../store/selectors";
 import { postDigisosDone, postDone } from "../../../api/api";
 import NotifikasjonsBoks from "../notifikasjonsBoks/NotifikasjonsBoks";
+import { formatToReadableDate, setLocaleDate } from "../../../language/i18n";
 
 const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks }) => {
   const translate = useIntl();
-  const { formatDateAndTime } = i18n[translate.locale];
 
   const removeBeskjed = useStore(selectRemoveBeskjed);
 
@@ -28,6 +27,8 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
     removeBeskjed(beskjed);
   };
 
+  setLocaleDate();
+
   return (
     <>
       {oppgaver &&
@@ -37,7 +38,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
             <NotifikasjonsBoks
               id={o.eventId}
               tekst={o.tekst}
-              dato={formatDateAndTime(o.eventTidspunkt)}
+              dato={formatToReadableDate(o.eventTidspunkt)}
               href={o.link}
               type="oppgave"
               isMasked={isMasked(o?.tekst)}
@@ -50,7 +51,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
             <NotifikasjonsBoks
               id={b.eventId}
               tekst={b.tekst}
-              dato={formatDateAndTime(b.eventTidspunkt)}
+              dato={formatToReadableDate(b.eventTidspunkt)}
               href={b.link}
               type="beskjed"
               isMasked={isMasked(b?.tekst)}
@@ -63,7 +64,7 @@ const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks 
           <NotifikasjonsBoks
             id={i.eventId}
             tekst={i.tekst}
-            dato={formatDateAndTime(i.eventTidspunkt)}
+            dato={formatToReadableDate(i.eventTidspunkt)}
             href={i.link}
             type="beskjed"
             isMasked={isMasked(i?.tekst)}

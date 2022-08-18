@@ -4,11 +4,7 @@ import { fetcher } from "../../api/api";
 import { oppfolgingUrl } from "../../api/urls";
 import Notifikasjoner from "../notifikasjoner/Notifikasjoner";
 import InngangVarslinger from "../inngangVarslinger/InngangVarslinger";
-import Utbetaling from "../fliser/utbetaling/Utbetaling";
 import Sidetittel from "../sidetittel/Sidetittel";
-import SisteSakerPanel from "../fliser/siste-saker-panel/SisteSakerPanel";
-import GenerelleFliser from "../fliser/generelleFliser/GenerelleFliser";
-import KommunikasjonsFlis from "../fliser/kommunikasjonsflis/KommunikasjonsFlis";
 import "./MainPage.css";
 
 const MainPage = () => {

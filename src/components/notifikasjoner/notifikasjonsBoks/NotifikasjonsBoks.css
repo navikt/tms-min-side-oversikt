@@ -1,19 +1,23 @@
 .oppgave-wrapper {
   border-radius: 8px;
+  padding: 1.5rem !important;
 }
 
 .oppgave-wrapper-selected {
   background-color: #FFD799 !important;
   border: 1px solid transparent !important;
+  padding: 1.5rem !important;
 }
 
 .beskjed-wrapper {
   border-radius: 8px;
+  padding: 1.5rem !important;
 }
 
 .beskjed-wrapper-selected {
   background-color: #99C4DD !important;
   border: 1px solid transparent !important;
+  padding: 1.5rem !important;
 }
 
 .brukernotifikasjon-tekst-wrapper {
@@ -40,6 +44,7 @@
 .beskjed-arkiver {
   display: flex;
   margin-bottom: 2px;
+  padding: 1.5rem !important;
 }
 
 .beskjed-arkiver-content {
@@ -138,53 +143,53 @@
 @media (min-width: 0px) {
   .oppgave-wrapper {
     width: 100%;
-    margin: 0 0.5rem 0 0.5rem;
+    margin: 0 0.5rem 1rem 0.5rem;
   }
 
   .oppgave-wrapper-selected {
     width: 100%;
-    margin: 0 0.5rem 0 0.5rem;
+    margin: 0 0.5rem 1rem 0.5rem;
   }
   
   .beskjed-wrapper {
     width: 100%;
-    margin: 0 0.5rem 0 0.5rem;
+    margin: 0 0.5rem 1rem 0.5rem;
   }
 
   .beskjed-wrapper-selected {
     width: 100%;
-    margin: 0 0.5rem 0 0.5rem;
+    margin: 0 0.5rem 1rem 0.5rem;
   }
 
   .beskjed-arkiver {
     width: 100%;
-    margin: 0 0.5rem 4px 0.5rem;
+    margin: 0 0.5rem 1rem 0.5rem;
   }
 }
 
 @media (min-width: 648px) {
   .oppgave-wrapper {
     width: 37.5rem;
-    margin: 0;
+    margin: 0 0 1rem 0;
   }
 
   .oppgave-wrapper-selected {
     width: 37.5rem;
-    margin: 0;
+    margin: 0 0 1rem 0;
   }
   
   .beskjed-wrapper {
     width: 37.5rem;
-    margin: 0;
+    margin: 0 0 1rem 0;
   }
 
   .beskjed-wrapper-selected {
     width: 37.5rem;
-    margin: 0;
+    margin: 0 0 1rem 0;
   }
 
   .beskjed-arkiver {
     width: 37.5rem;
-    margin: 0 0 4px 0;
+    margin: 0 0 1rem 0;
   }
 }

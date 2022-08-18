@@ -10,19 +10,10 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react", "jsx-a11y"],
-  ignorePatterns: [".eslintrc.js", "**/dist/*.js", "vite.config.js", "/server/server.js"],
+  ignorePatterns: [".eslintrc.*", "**/dist/*.js", "vite.config.js", "/server/server.js"],
   rules: {
-    indent: ["error", "tab"],
-    "linebreak-style": ["error", "unix"],
-    quotes: ["error", "double"],
-    //TODO: enable rules
-    "no-unused-vars": "off",
-    "react/prop-types": "off",
+    //ref https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
+    "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "react-in-jsx-scope": "off",
-    "react/jsx-key": "warn",
-    "no-mixed-spaces-and-tabs": "off",
-    "jsx-a11y/click-events-have-key-events": "warn",
-    "jsx-a11y/no-static-element-interactions": "warn",
   },
 };

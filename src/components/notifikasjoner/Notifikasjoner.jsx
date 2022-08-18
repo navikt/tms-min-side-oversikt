@@ -1,13 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { fetcher } from "../../api/api";
-import {
-  oppgaverApiUrl,
-  beskjederApiUrl,
-  innboksApiUrl,
-  meldekortinfoApiUrl,
-  minSideProxyLoginStatusUrl,
-} from "../../api/urls";
+import { oppgaverApiUrl, beskjederApiUrl, innboksApiUrl, meldekortinfoApiUrl } from "../../api/urls";
 import { selectAddBeskjederList, selectBeskjederList } from "../../store/selectors";
 import useStore from "../../store/store";
 import Meldekort from "../meldekort/Meldekort";

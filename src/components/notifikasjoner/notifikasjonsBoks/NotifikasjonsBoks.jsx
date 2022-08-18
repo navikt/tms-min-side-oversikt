@@ -3,9 +3,9 @@ import { useIntl } from "react-intl";
 import { BodyShort, Heading, LinkPanel, Panel } from "@navikt/ds-react";
 import ArkiverKnapp from "../../arkiverknapp/ArkiverKnapp";
 import { loginserviceStepUpUrl } from "../../../api/urls";
-import "./NotifikasjonsBoks.css";
 import { FileFolder, SpeechBubble, Task } from "@navikt/ds-icons";
 import { logAmplitudeEvent } from "../../../utils/amplitude";
+import "./NotifikasjonsBoks.css";
 
 const NotifikasjonsBoks = ({ id, tekst, dato, href, type, isMasked, remove, beskjed }) => {
   const [isSelected, setIsSelected] = useState(false);

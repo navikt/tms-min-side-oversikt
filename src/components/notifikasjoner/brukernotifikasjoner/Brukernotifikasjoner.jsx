@@ -8,9 +8,7 @@ import { postDigisosDone, postDone } from "../../../api/api";
 import NotifikasjonsBoks from "../notifikasjonsBoks/NotifikasjonsBoks";
 import { formatToReadableDate, setLocaleDate } from "../../../language/i18n";
 
-const Brukernotifikasjoner = ({ innloggingsstatus, oppgaver, beskjeder, innboks }) => {
-  const translate = useIntl();
-
+const Brukernotifikasjoner = ({ oppgaver, beskjeder, innboks }) => {
   const removeBeskjed = useStore(selectRemoveBeskjed);
 
   const remove = (beskjed) => {

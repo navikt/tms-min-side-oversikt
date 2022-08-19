@@ -38,6 +38,11 @@ const NotifikasjonsBoks = ({ id, tekst, dato, href, type, isMasked, remove, besk
     setShowArkiverIkon(false);
   };
 
+  const handleOnClick = () => {
+    remove(beskjed);
+    logAmplitudeEvent(isOppgave ? "Oppgave" : "Beskjed");
+  };
+
   return (
     <>
       {!isArkiverbarBeskjed ? (
@@ -56,7 +61,7 @@ const NotifikasjonsBoks = ({ id, tekst, dato, href, type, isMasked, remove, besk
           key={id}
           onMouseEnter={handleNotifikasjonMouseEnter}
           onMouseLeave={handleNotifikasjonMouseLeave}
-          onClick={logAmplitudeEvent(isOppgave ? "Oppgave" : "Beskjed")}
+          onClick={() => handleOnClick()}
         >
           <div
             style={{

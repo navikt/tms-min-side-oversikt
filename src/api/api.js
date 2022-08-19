@@ -32,6 +32,6 @@ const postJSON = (url, content) =>
       .catch((e) => reject(e));
   });
 
-export const postDone = (content) => postJSON(postDigiSosDoneUrl, content);
+export const postDone = (content) => postJSON(postDoneUrl, content);
 
-export const postDigisosDone = (content) => postJSON(postDoneUrl, content);
+export const postDigisosDone = (content) => postJSON(postDigiSosDoneUrl, content);

@@ -5,6 +5,9 @@ metadata:
   namespace: min-side
   labels:
     team: min-side
+  annotations:
+    config.linkerd.io/proxy-memory-limit: "512Mi"
+    config.linkerd.io/proxy-memory-request: "128Mi"
 spec:
   envFrom:
     - secret: tms-min-side-oversikt-secrets

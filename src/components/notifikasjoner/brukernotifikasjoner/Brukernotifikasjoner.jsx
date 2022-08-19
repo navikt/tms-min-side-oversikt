@@ -66,6 +66,8 @@ const Brukernotifikasjoner = ({ oppgaver, beskjeder, innboks }) => {
             href={i.link}
             type="beskjed"
             isMasked={isMasked(i?.tekst)}
+            remove={remove}
+            beskjed={i}
           />
         ))}
     </>

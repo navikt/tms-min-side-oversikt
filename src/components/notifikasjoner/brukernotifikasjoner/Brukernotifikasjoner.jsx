@@ -36,7 +36,7 @@ const Brukernotifikasjoner = ({ oppgaver, beskjeder, innboks }) => {
             <NotifikasjonsBoks
               id={o.eventId}
               tekst={o.tekst}
-              dato={formatToReadableDate(o.eventTidspunkt)}
+              dato={formatToReadableDate(o.forstBehandlet)}
               href={o.link}
               type="oppgave"
               isMasked={isMasked(o?.tekst)}
@@ -49,7 +49,7 @@ const Brukernotifikasjoner = ({ oppgaver, beskjeder, innboks }) => {
             <NotifikasjonsBoks
               id={b.eventId}
               tekst={b.tekst}
-              dato={formatToReadableDate(b.eventTidspunkt)}
+              dato={formatToReadableDate(b.forstBehandlet)}
               href={b.link}
               type="beskjed"
               isMasked={isMasked(b?.tekst)}
@@ -62,7 +62,7 @@ const Brukernotifikasjoner = ({ oppgaver, beskjeder, innboks }) => {
           <NotifikasjonsBoks
             id={i.eventId}
             tekst={i.tekst}
-            dato={formatToReadableDate(i.eventTidspunkt)}
+            dato={formatToReadableDate(i.forstBehandlet)}
             href={i.link}
             type="beskjed"
             isMasked={isMasked(i?.tekst)}

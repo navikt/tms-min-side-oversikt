@@ -4,11 +4,11 @@
   "scripts": {
     "dev": "vite",
     "lint": "eslint --fix --ext .js,.jsx .",
+    "lint:staged": "eslint -c .eslintrc.pre-commit.js --fix --ext .js,.jsx .",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "prepare": "husky install",
-    "pretty-quick": "pretty-quick --pattern \"**/*.*(jsx)\""
+    "prepare": "husky install"
   },
   "dependencies": {
     "@navikt/ds-css": "0.12.5",
@@ -35,7 +35,8 @@
     "eslint-plugin-react": "^7.30.1",
     "husky": "7.0.0",
     "jsdom": "19.0.0",
-    "pretty-quick": "3.1.3",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
     "rollup-plugin-import-map": "2.2.2",
     "vite": "2.7.2",
     "vite-plugin-compression": "^0.5.1",
@@ -44,5 +45,16 @@
   },
   "prettier": {
     "printWidth": 120
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint -c .eslintrc.pre-commit.js --fix",
+      "prettier --cache --write",
+      "git add"
+    ],
+    "*.{css,md,html,json}": [
+      "prettier --cache --write",
+      "git add"
+    ]
   }
 }

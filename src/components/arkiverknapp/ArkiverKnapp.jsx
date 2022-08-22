@@ -1,10 +1,10 @@
 import { logAmplitudeEvent } from "../../utils/amplitude";
-import "./ArkiverKnapp.css";
+import BtnCSS from "./ArkiverKnapp.module.css";
 
 const ArkiverKnapp = ({ mouseEnter, mouseLeave, remove, beskjed }) => {
   return (
-    <a
-      className="beskjed-arkiver-knapp"
+    <button
+      className={BtnCSS.btn}
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
       onClick={() => {
@@ -13,7 +13,7 @@ const ArkiverKnapp = ({ mouseEnter, mouseLeave, remove, beskjed }) => {
       }}
     >
       Arkiver
-    </a>
+    </button>
   );
 };
 

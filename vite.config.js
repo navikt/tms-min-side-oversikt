@@ -51,4 +51,9 @@ export default ({ command }) => ({
       inline: ["@testing-library/user-event"],
     },
   },
+  css: {
+    modules: {
+      generateScopedName: "[name]__[local]___[hash:base64:5]",
+    },
+  },
 });

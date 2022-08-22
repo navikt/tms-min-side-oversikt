@@ -1,10 +1,9 @@
-import React from "react";
 import { useQuery } from "react-query";
 import { fetcher } from "../../api/api";
 import { useIntl } from "react-intl";
 import { brukernavnApiUrl, identApiUrl } from "../../api/urls";
 import { Heading } from "@navikt/ds-react";
-import "./Sidetittel.css";
+import SidetittelCSS from "./Sidetittel.module.css";
 
 const Sidetittel = () => {
   const { data: navn, isError: navnFailed } = useQuery(brukernavnApiUrl, fetcher);
@@ -18,8 +17,8 @@ const Sidetittel = () => {
   const navnOrIdent = navnFailed ? ident?.ident : navn?.navn.toLowerCase();
 
   return (
-    <section className="heading-wrapper">
-      <Heading spacing size="xlarge" level="2" className="person-tekst">
+    <section className={SidetittelCSS.wrapper}>
+      <Heading spacing size="xlarge" level="2" className={SidetittelCSS.tekst}>
         {translate.formatMessage({ id: "sidetittel.hilsning" })}
         {navnOrIdent}
       </Heading>

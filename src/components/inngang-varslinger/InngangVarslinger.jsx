@@ -1,5 +1,3 @@
-import React from "react";
-import { Link, Router } from "react-router-dom";
 import { useQuery } from "react-query";
 import { fetcher } from "../../api/api";
 import { useIntl } from "react-intl";
@@ -9,8 +7,8 @@ import {
   inaktiveInnboksApiUrl,
   minSideVarslingerUrl,
 } from "../../api/urls";
-import "./InngangVarslinger.css";
 import { komponent, logAmplitudeEvent } from "../../utils/amplitude";
+import InngangVarslingerCSS from "./InngangVarslinger.module.css";
 
 const InngangVarslinger = () => {
   const { data: inaktiveOppgaver } = useQuery(inaktiveOppgaverApiUrl, fetcher);
@@ -26,7 +24,7 @@ const InngangVarslinger = () => {
     <>
       {skjulInngang ? null : (
         <a
-          className="inngang-varslinger"
+          className={InngangVarslingerCSS.inngang}
           href={minSideVarslingerUrl}
           onClick={() => logAmplitudeEvent(komponent.inngangVarslinger)}
         >

@@ -1,4 +1,3 @@
-import React from "react";
 import { QueryClientProvider } from "react-query";
 import { initializeAmplitude } from "./utils/amplitude";
 import LanguageProvider from "./providers/LanguageProvider";

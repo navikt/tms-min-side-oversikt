@@ -16,7 +16,7 @@ export const formatToReadableDate = (date) => {
 const i18n = {
   nb: {
     numberToWord: (tall) => {
-      const ord = ["en", "to", "tre", "fire", "fem", "seks", "sju", "åtte", "ni", "ti", "elleve", "tolv"];
+      const ord = ["ett", "to", "tre", "fire", "fem", "seks", "sju", "åtte", "ni", "ti", "elleve", "tolv"];
       return tall > 12 ? tall : ord[tall - 1];
     },
     formatDate: (date) => new Date(date).toLocaleDateString("nb-NO"),

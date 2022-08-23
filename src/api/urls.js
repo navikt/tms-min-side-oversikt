@@ -72,6 +72,7 @@ export const minSideProxyUrl = MIN_SIDE_PROXY_URL[getEnvironment()];
 
 export const meldekortinfoApiUrl = `${dittNavApiUrl}/meldekortinfo`;
 export const meldekortUrl = `${navUrl}/meldekort`;
+export const etterregistreringMeldekortUrl = `${navUrl}/meldekort/etterregistrer-meldekort`;
 export const oppgaverApiUrl = `${dittNavApiUrl}/oppgave`;
 export const beskjederApiUrl = `${dittNavApiUrl}/beskjed`;
 export const innboksApiUrl = `${dittNavApiUrl}/innboks`;

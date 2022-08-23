@@ -57,32 +57,11 @@ const Meldekort = () => {
         })
       : "";
 
-  const isEtterregistrering = meldekort?.etterregistrerteMeldekort > 0;
-  const overskriftIfEtterregistrering = translate.formatMessage(
-    { id: "meldekort.etterregistreringer" },
-    { etterregistreringer: numberToWord(meldekort?.etterregistrerteMeldekort) }
-  );
-
   //dato property = dato på andre meldinger, men for meldekort skal dato byttes ut med en tekst angående feriedager
   return (
     <>
       {isMeldekortBruker ? (
-        isEtterregistrering ? (
-          <Oppgave
-            tekst={isEtterregistrering ? overskriftIfEtterregistrering : overskrift}
-            dato={isEtterregistrering ? "" : feriedager}
-            href={meldekortUrl}
-            id="meldekort-notifikasjon"
-          />
-        ) : (
-          <Beskjed
-            tekst={isEtterregistrering ? overskriftIfEtterregistrering : overskrift}
-            dato={isEtterregistrering ? "" : feriedager}
-            type={isEtterregistrering ? "oppgave" : type}
-            href={meldekortUrl}
-            id="meldekort-notifikasjon"
-          />
-        )
+        <Oppgave tekst={overskrift} dato={feriedager} href={meldekortUrl} id="meldekort-notifikasjon" />
       ) : null}
     </>
   );

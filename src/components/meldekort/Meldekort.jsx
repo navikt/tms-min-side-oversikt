@@ -1,10 +1,13 @@
-import React from "react";
+import { useQuery } from "react-query";
+import { fetcher } from "../../api/api";
 import { useIntl } from "react-intl";
-import { meldekortUrl } from "../../api/urls";
+import { meldekortinfoApiUrl, meldekortUrl } from "../../api/urls";
 import i18n from "../../language/i18n";
-import NotifikasjonsBoks from "../notifikasjoner/notifikasjonsBoks/NotifikasjonsBoks";
+import Beskjed from "../varsler/beskjed/Beskjed";
+import Oppgave from "../varsler/oppgave/Oppgave";
 
-const Meldekort = ({ meldekort }) => {
+const Meldekort = () => {
+  const { data: meldekort } = useQuery(meldekortinfoApiUrl, fetcher);
   const translate = useIntl();
   const { formatDateMonth, formatDayAndMonth, numberToWord } = i18n[translate.locale];
   const isMeldekortBruker = meldekort?.meldekortbruker;
@@ -64,13 +67,22 @@ const Meldekort = ({ meldekort }) => {
   return (
     <>
       {isMeldekortBruker ? (
-        <NotifikasjonsBoks
-          tekst={isEtterregistrering ? overskriftIfEtterregistrering : overskrift}
-          dato={isEtterregistrering ? "" : feriedager}
-          type={isEtterregistrering ? "oppgave" : type}
-          href={meldekortUrl}
-          id="meldekort-notifikasjon"
-        />
+        isEtterregistrering ? (
+          <Oppgave
+            tekst={isEtterregistrering ? overskriftIfEtterregistrering : overskrift}
+            dato={isEtterregistrering ? "" : feriedager}
+            href={meldekortUrl}
+            id="meldekort-notifikasjon"
+          />
+        ) : (
+          <Beskjed
+            tekst={isEtterregistrering ? overskriftIfEtterregistrering : overskrift}
+            dato={isEtterregistrering ? "" : feriedager}
+            type={isEtterregistrering ? "oppgave" : type}
+            href={meldekortUrl}
+            id="meldekort-notifikasjon"
+          />
+        )
       ) : null}
     </>
   );

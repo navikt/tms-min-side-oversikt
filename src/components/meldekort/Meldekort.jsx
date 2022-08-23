@@ -7,14 +7,17 @@ import Beskjed from "../varsler/beskjed/Beskjed";
 import Oppgave from "../varsler/oppgave/Oppgave";
 
 const Meldekort = () => {
-  const { data: meldekort } = useQuery(meldekortinfoApiUrl, fetcher);
+  const { data: meldekort, isLoading } = useQuery(meldekortinfoApiUrl, fetcher);
   const translate = useIntl();
   const { formatDateMonth, formatDayAndMonth, numberToWord } = i18n[translate.locale];
-  const isMeldekortBruker = meldekort?.meldekortbruker;
 
-  //gamle klarForInnsending
-  const showIngress = meldekort?.nyeMeldekort?.antallNyeMeldekort > 0;
-  const type = showIngress ? "oppgave" : "beskjed";
+  if (isLoading) {
+    return null;
+  }
+
+  const isMeldekortBruker = meldekort?.meldekortbruker;
+  const isPendingForInnsending = isMeldekortBruker && meldekort?.nyeMeldekort?.nesteInnsendingAvMeldekort;
+  const isReadyForInnsending = isMeldekortBruker && meldekort?.nyeMeldekort?.antallNyeMeldekort > 0;
 
   const fremtidig = meldekort?.nyeMeldekort?.nesteInnsendingAvMeldekort
     ? translate.formatMessage(
@@ -22,6 +25,7 @@ const Meldekort = () => {
         { dato: formatDateMonth(meldekort?.nyeMeldekort?.nesteInnsendingAvMeldekort) }
       )
     : "";
+
   const melding = meldekort?.nyeMeldekort?.nesteMeldekort
     ? translate.formatMessage(
         {
@@ -47,7 +51,7 @@ const Meldekort = () => {
     ? translate.formatMessage({ id: "meldekort.trekk" })
     : "";
 
-  const overskrift = showIngress ? fremtidig + melding + trekk + advarsel : fremtidig + advarsel;
+  const overskrift = isReadyForInnsending ? fremtidig + melding + trekk + advarsel : fremtidig + advarsel;
 
   const feriedager =
     meldekort?.resterendeFeriedager > 0
@@ -57,14 +61,17 @@ const Meldekort = () => {
         })
       : "";
 
-  //dato property = dato på andre meldinger, men for meldekort skal dato byttes ut med en tekst angående feriedager
-  return (
-    <>
-      {isMeldekortBruker ? (
-        <Oppgave tekst={overskrift} dato={feriedager} href={meldekortUrl} id="meldekort-notifikasjon" />
-      ) : null}
-    </>
-  );
+  // dato property = dato på andre meldinger, men for meldekort skal dato byttes ut med en tekst angående feriedager
+
+  if (isPendingForInnsending) {
+    return <Beskjed tekst={overskrift} dato={feriedager} href={meldekortUrl} id="meldekort-notifikasjon" />;
+  }
+
+  if (isReadyForInnsending) {
+    return <Oppgave tekst={overskrift} dato={feriedager} href={meldekortUrl} id="meldekort-notifikasjon" />;
+  }
+
+  return null;
 };
 
 export default Meldekort;

@@ -98,7 +98,7 @@ export default [
     method: "get",
     response: () => {
       return {
-        etterregistrerteMeldekort: 0,
+        etterregistrerteMeldekort: 1,
         meldekortbruker: true,
         nyeMeldekort: {
           antallNyeMeldekort: 1,

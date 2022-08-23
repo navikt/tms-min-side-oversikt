@@ -4,6 +4,7 @@ import InngangVarslinger from "./components/inngang-varslinger/InngangVarslinger
 import "@navikt/ds-css";
 import "./App.css";
 import Meldekort from "./components/meldekort/Meldekort";
+import EtterregistreringMeldekort from "./components/meldekort/etterregistrering/EtterregistreringMeldekort";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <section className="brukernotifikasjons-liste">
             <Meldekort />
             <VarslerList />
+            <EtterregistreringMeldekort />
           </section>
           <InngangVarslinger />
         </section>

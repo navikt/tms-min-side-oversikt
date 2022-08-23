@@ -57,7 +57,7 @@ const Meldekort = () => {
         })
       : "";
 
-  const isEtterregistrering = meldekort?.etterregistrerteMeldekort == 0;
+  const isEtterregistrering = meldekort?.etterregistrerteMeldekort > 0;
   const overskriftIfEtterregistrering = translate.formatMessage(
     { id: "meldekort.etterregistreringer" },
     { etterregistreringer: numberToWord(meldekort?.etterregistrerteMeldekort) }

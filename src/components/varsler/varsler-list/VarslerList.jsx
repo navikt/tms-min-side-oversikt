@@ -87,6 +87,8 @@ const VarslerList = () => {
             dato={formatToReadableDate(i.forstBehandlet)}
             href={i.link}
             isMasked={isMasked(i?.tekst)}
+            remove={remove}
+            beskjed={i}
           />
         ))}
     </>

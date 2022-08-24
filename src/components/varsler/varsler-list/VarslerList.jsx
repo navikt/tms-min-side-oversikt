@@ -11,6 +11,7 @@ import { formatToReadableDate, setLocaleDate } from "../../../language/i18n";
 import Oppgave from "../../varsler/oppgave/Oppgave";
 import Beskjed from "../../varsler/beskjed/Beskjed";
 import ArkiverbarBeskjed from "../../varsler/arkiverbar-beskjed/ArkiverbarBeskjed";
+import InnboksBeskjed from "../innboks-beskjed/InnboksBeskjed";
 
 const VarslerList = () => {
   const { data: oppgaver } = useQuery(oppgaverApiUrl, fetcher);
@@ -82,7 +83,7 @@ const VarslerList = () => {
           )}
       {innboks &&
         innboks.map((i) => (
-          <Beskjed
+          <InnboksBeskjed
             tekst={i.tekst}
             dato={formatToReadableDate(i.forstBehandlet)}
             href={i.link}

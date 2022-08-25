@@ -23,23 +23,7 @@ const VarslerList = () => {
     onSuccess: addBeskjederList,
   });
 
-  const removeBeskjed = useStore(selectRemoveBeskjed);
   const hasNoHref = (href) => href === undefined || href === null || href === "";
-
-  const remove = (beskjed) => {
-    if (beskjed.produsent === "digiSos") {
-      postDigisosDone({
-        eventId: beskjed.eventId,
-        grupperingsId: beskjed.grupperingsId,
-      });
-    } else {
-      postDone({
-        eventId: beskjed.eventId,
-      });
-    }
-    removeBeskjed(beskjed);
-  };
-
   setLocaleDate();
 
   return (
@@ -67,7 +51,7 @@ const VarslerList = () => {
                 dato={formatToReadableDate(b.forstBehandlet)}
                 href={b.link}
                 isMasked={isMasked(b?.tekst)}
-                remove={remove}
+                remove={null}
                 beskjed={b}
               />
             ) : (
@@ -76,7 +60,7 @@ const VarslerList = () => {
                 dato={formatToReadableDate(b.forstBehandlet)}
                 href={b.link}
                 isMasked={isMasked(b?.tekst)}
-                remove={remove}
+                remove={null}
                 beskjed={b}
               />
             )

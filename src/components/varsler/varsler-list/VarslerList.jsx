@@ -37,7 +37,7 @@ const VarslerList = () => {
         eventId: beskjed.eventId,
       });
     }
-    removeBeskjed(beskjed);
+    //removeBeskjed(beskjed);
   };
 
   setLocaleDate();

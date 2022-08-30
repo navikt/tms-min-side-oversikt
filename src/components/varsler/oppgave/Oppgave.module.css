@@ -1,6 +1,5 @@
 .wrapper {
   border-radius: 8px;
-  padding: 1.5rem !important;
 }
 
 .wrapper:hover {
@@ -9,7 +8,6 @@
 }
 
 .tekst_wrapper {
-  padding: 0 1rem 0 0;
   justify-items: center;
   align-items: center;
 }
@@ -25,7 +23,7 @@
 
 .dato {
   font-size: 16px !important;
-  margin: 0 0 0 0 !important;
+  margin: 0 !important;
   color: #707070;
 }
 
@@ -33,8 +31,8 @@
   display: flex;
   align-self: center;
   overflow: visible;
-  padding: 1rem;
-  margin: 0 -1rem 0 0.5rem;
+  padding: 0.75rem;
+  margin: 0 0 0 0.5rem;
   background-color: #ffeccc;
   border-radius: 50%;
   color: #262626;
@@ -43,13 +41,14 @@
 @media (min-width: 0px) {
   .wrapper {
     width: 100%;
-    margin: 0 0.5rem 1rem 0.5rem;
+    margin: 0 0 0.25rem 0;
+    padding: 0.75rem 1rem !important;
   }
 }
 
 @media (min-width: 648px) {
   .wrapper {
     width: 37.5rem;
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.25rem 0;
   }
 }

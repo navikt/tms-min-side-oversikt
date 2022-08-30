@@ -43,19 +43,19 @@ const ArkiverbarBeskjed = ({ tekst, dato, isMasked, remove, beskjed }) => {
       <div className={BeskjedCSS.content}>
         <div className={BeskjedCSS.ikon}>{showArkiverIkon ? <FileFolder /> : <SpeechBubble />}</div>
         <div className={BeskjedCSS.tekst_wrapper}>
-          <Heading spacing level="2" size="medium" className={BeskjedCSS.tekst}>
-            {printTekst}
-          </Heading>
+          <h2 className={BeskjedCSS.tekst}>{printTekst}</h2>
           <BodyShort className={BeskjedCSS.dato}>{dato}</BodyShort>
+          <div className={BeskjedCSS.btn_wrapper}>
+            <ArkiverKnapp
+              className={BeskjedCSS.knapp}
+              mouseEnter={handleArkiverknappMouseEnter}
+              mouseLeave={handleArkiverknappMouseLeave}
+              remove={requestDone}
+              beskjed={beskjed}
+            />
+          </div>
         </div>
       </div>
-      <ArkiverKnapp
-        className={BeskjedCSS.knapp}
-        mouseEnter={handleArkiverknappMouseEnter}
-        mouseLeave={handleArkiverknappMouseLeave}
-        remove={requestDone}
-        beskjed={beskjed}
-      />
     </Panel>
   );
 };

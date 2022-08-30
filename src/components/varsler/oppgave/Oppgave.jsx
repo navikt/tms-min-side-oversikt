@@ -18,7 +18,7 @@ const Oppgave = ({ tekst, dato, href, isMasked }) => {
         style={{
           display: "grid",
           gridAutoFlow: "column",
-          gap: "var(--navds-spacing-8)",
+          gap: "var(--navds-spacing-6)",
           alignItems: "center",
         }}
       >

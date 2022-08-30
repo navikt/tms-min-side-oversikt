@@ -41,7 +41,7 @@ const Beskjed = ({ tekst, dato, href, isMasked, remove, beskjed }) => {
         style={{
           display: "grid",
           gridAutoFlow: "column",
-          gap: "var(--navds-spacing-8)",
+          gap: "var(--navds-spacing-6)",
           alignItems: "center",
         }}
       >

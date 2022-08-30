@@ -12,7 +12,7 @@ function App() {
       <div className="app">
         <section className="page-wrapper-microfrontend">
           <Sidetittel />
-          <section className="brukernotifikasjons-liste">
+          <section className="varsler">
             <Meldekort />
             <VarslerList />
             <EtterregistreringMeldekort />

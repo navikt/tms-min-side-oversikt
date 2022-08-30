@@ -9,7 +9,7 @@ import { postDigisosDone, postDone } from "../../../api/api";
 import useStore from "../../../store/store";
 import { selectRemoveBeskjed } from "../../../store/selectors";
 
-const ArkiverbarBeskjed = ({ tekst, dato, isMasked, remove, beskjed }) => {
+const ArkiverbarBeskjed = ({ tekst, dato, isMasked, beskjed }) => {
   const [showArkiverIkon, setShowArkiverIkon] = useState(false);
   const translate = useIntl();
   const removeBeskjed = useStore(selectRemoveBeskjed);

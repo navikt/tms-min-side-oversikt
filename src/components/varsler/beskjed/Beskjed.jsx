@@ -8,9 +8,8 @@ import { postDigisosDone, postDone } from "../../../api/api";
 import useStore from "../../../store/store";
 import { selectRemoveBeskjed } from "../../../store/selectors";
 
-const Beskjed = ({ tekst, dato, href, isMasked, remove, beskjed }) => {
+const Beskjed = ({ tekst, dato, href, isMasked, beskjed }) => {
   const translate = useIntl();
-  const removeBeskjed = useStore(selectRemoveBeskjed);
 
   const printTekst = isMasked ? translate.formatMessage({ id: "beskjed.maskert.tekst" }) : tekst;
 
@@ -27,7 +26,6 @@ const Beskjed = ({ tekst, dato, href, isMasked, remove, beskjed }) => {
         eventId: beskjed.eventId,
       });
     }
-    // removeBeskjed(beskjed);
   };
 
   const handleOnClick = () => {

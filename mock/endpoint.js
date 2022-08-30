@@ -14,7 +14,7 @@ export default [
     response: () => {
       return [
         {
-          eventTidspunkt: "2020-03-13T08:53:24.636Z",
+          forstBehandlet: "2020-03-13T08:53:24.636Z",
           eventId: "1584093204636",
           tekst: "Du har en sykemelding som må godkjennes",
           link: "https://enNyLenke",
@@ -22,7 +22,7 @@ export default [
           sikkerhetsnivaa: 3,
         },
         {
-          eventTidspunkt: "2020-03-13T09:03:05.733Z",
+          forstBehandlet: "2020-03-13T09:03:05.733Z",
           eventId: "1584093785733",
           tekst: "Oppgave: Mangelende dokumentasjon til søknad",
           link: "https://enNyLenke",
@@ -38,7 +38,7 @@ export default [
     response: () => {
       return [
         {
-          eventTidspunkt: "2020-03-13T08:53:31.607Z",
+          forstBehandlet: "2020-03-13T08:53:31.607Z",
           eventId: "1584093211607",
           tekst: "Svar fra veilederen din i innboksen: Hei, nå har jeg sjekket om...",
           link: "https://enNyLenke",
@@ -46,7 +46,7 @@ export default [
           sikkerhetsnivaa: 3,
         },
         {
-          eventTidspunkt: "2020-03-13T09:03:09.348Z",
+          forstBehandlet: "2020-03-13T09:03:09.348Z",
           eventId: "1584093789348",
           tekst: "Samtalereferat fra telefonsamtale 08.12.2019 kl. 11:44",
           link: "https://enNyLenke",
@@ -63,7 +63,7 @@ export default [
       return [
         {
           uid: "2313ef1a-a69a-45d9-a3ff-38e4522710e0",
-          eventTidspunkt: "2020-03-13T08:53:17.47Z",
+          forstBehandlet: "2020-03-13T08:53:17.47Z",
           eventId: "1584093197470",
           tekst:
             "Vi mottok søknaden din 18. september 2019. Du kan følge med på statusen i Dine foreldrepenger. Her kan du også ettersende vedlegg til sønakden hvis det er noe du ønsker å gjøre.",
@@ -72,7 +72,7 @@ export default [
           sikkerhetsnivaa: 3,
         },
         {
-          eventTidspunkt: "2019-11-27T12:24:34.671Z",
+          forstBehandlet: "2019-11-27T12:24:34.671Z",
           eventId: "1174857474672",
           uid: "934de6ce-f94f-47de-84d2-639ac2674627",
           tekst:
@@ -83,7 +83,7 @@ export default [
         },
         {
           uid: "b922506b-7789-4416-beab-409a7681f53e",
-          eventTidspunkt: "2020-03-13T09:03:01.449Z",
+          forstBehandlet: "2020-03-13T09:03:01.449Z",
           eventId: "1584093781449",
           tekst: "Vi mottok søknaden din 18. september 2019. Du kan følge med på statusen i Dine foreldrepenger.",
           link: "",

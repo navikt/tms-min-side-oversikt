@@ -3,8 +3,8 @@ import { fetcher } from "../../api/api";
 import { useIntl } from "react-intl";
 import { brukernavnApiUrl, identApiUrl } from "../../api/urls";
 import { Heading } from "@navikt/ds-react";
-import SidetittelCSS from "./Sidetittel.module.css";
 import { getHilsningByHour } from "./hilsning";
+import SidetittelCSS from "./Sidetittel.module.css";
 
 const Sidetittel = () => {
   const { data: navn, isError: navnFailed } = useQuery(brukernavnApiUrl, fetcher);
@@ -20,8 +20,10 @@ const Sidetittel = () => {
 
   return (
     <section className={SidetittelCSS.wrapper}>
-      <Heading spacing size="xlarge" level="2" className={SidetittelCSS.tekst}>
+      <Heading size={"large"} className={SidetittelCSS.hilsning}>
         {translate.formatMessage({ id: hilsning })}
+      </Heading>
+      <Heading spacing size="xlarge" level="2" className={SidetittelCSS.tekst}>
         {navnOrIdent}
       </Heading>
     </section>

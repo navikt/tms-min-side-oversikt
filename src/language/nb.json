@@ -53,5 +53,7 @@
   "generellefliser.skjemaer-tittel": "Skjemaer",
   "generellefliser.pensjon-tittel": "Din pensjon",
 
-  "sidetittel.hilsning": "Hei, "
+  "sidetittel.hilsning": "Hei, ",
+  "sidetittel.hilsning.morgen": "God morgen, ",
+  "sidetittel.hilsning.kveld": "God kveld, "
 }

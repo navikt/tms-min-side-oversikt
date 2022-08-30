@@ -20,7 +20,7 @@ const Sidetittel = () => {
 
   return (
     <section className={SidetittelCSS.wrapper}>
-      <Heading size={"medium"} className={SidetittelCSS.hilsning}>
+      <Heading size={"large"} className={SidetittelCSS.hilsning}>
         {translate.formatMessage({ id: hilsning })}
       </Heading>
       <Heading spacing size="xlarge" level="2" className={SidetittelCSS.tekst}>

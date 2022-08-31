@@ -1,7 +1,11 @@
 .main {
   height: auto;
   min-height: 100%;
-  margin-bottom: 2rem;
+}
+
+.main > svg {
+  width: 22px;
+  height: 22px;
 }
 
 .app {
@@ -9,11 +13,18 @@
   display: flex;
 }
 
-svg {
-  width: 22px;
-  height: 22px;
-}
-
 .varsler {
   margin-bottom: 1rem;
+}
+
+@media (min-width: 0px) {
+  .main {
+    margin: 0 1rem 2rem 1rem;
+  }
+}
+
+@media (min-width: 648px) {
+  .main {
+    margin: 0 0 2rem 0;
+  }
 }

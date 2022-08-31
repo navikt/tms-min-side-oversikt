@@ -1,6 +1,7 @@
 .main {
   height: auto;
   min-height: 100%;
+  margin-bottom: 2rem;
 }
 
 .main > svg {
@@ -18,13 +19,13 @@
 }
 
 @media (min-width: 0px) {
-  .main {
-    margin: 0 1rem 2rem 1rem;
+  .inngang {
+    margin-bottom: 2rem;
   }
 }
 
 @media (min-width: 648px) {
-  .main {
-    margin: 0 0 2rem 0;
+  .inngang {
+    margin-bottom: 2rem;
   }
 }

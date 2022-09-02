@@ -60,15 +60,7 @@ const VarslerList = () => {
               />
             )
           )}
-      {innboks &&
-        innboks.map((i) => (
-          <InnboksBeskjed
-            tekst={i.tekst}
-            dato={formatToReadableDate(i.forstBehandlet)}
-            href={i.link}
-            isMasked={isMasked(i?.tekst)}
-          />
-        ))}
+      {innboks && innboks?.length > 0 ? <InnboksBeskjed innboksBeskjeder={innboks} /> : null}
     </>
   );
 };

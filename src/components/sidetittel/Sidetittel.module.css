@@ -1,11 +1,10 @@
-.wrapper {
-  display: flex;
-  justify-content: flex-start;
-}
-
 .tekst {
   text-transform: capitalize;
   margin: 0 !important;
+}
+
+.hilsning {
+  color: var(--navds-semantic-color-text-muted);
 }
 
 @media (min-width: 0px) {

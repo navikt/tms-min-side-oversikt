@@ -41,7 +41,9 @@ const ArkiverbarBeskjed = ({ tekst, dato, isMasked, beskjed }) => {
   return (
     <Panel className={BeskjedCSS.beskjed}>
       <div className={BeskjedCSS.content}>
-        <div className={BeskjedCSS.ikon}>{showArkiverIkon ? <FileFolder /> : <SpeechBubble />}</div>
+        <div className={BeskjedCSS.ikon}>
+          {showArkiverIkon ? <FileFolder fontSize="1.375rem" /> : <SpeechBubble fontSize="1.375rem" />}
+        </div>
         <div className={BeskjedCSS.tekst_wrapper}>
           <h2 className={BeskjedCSS.tekst}>{printTekst}</h2>
           <BodyShort className={BeskjedCSS.dato}>{dato}</BodyShort>

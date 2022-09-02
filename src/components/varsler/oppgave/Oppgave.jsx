@@ -23,7 +23,7 @@ const Oppgave = ({ tekst, dato, href, isMasked }) => {
         }}
       >
         <div className={OppgaveCSS.ikon_wrapper}>
-          <Task />
+          <Task fontSize="1.375rem" />
         </div>
         <div className={OppgaveCSS.tekst_wrapper}>
           <LinkPanel.Title className={OppgaveCSS.tekst}>{printTekst}</LinkPanel.Title>

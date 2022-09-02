@@ -44,7 +44,7 @@ const Beskjed = ({ tekst, dato, href, isMasked, beskjed }) => {
         }}
       >
         <div className={BeskjedCSS.ikon_wrapper}>
-          <SpeechBubble />
+          <SpeechBubble fontSize="1.375rem" />
         </div>
         <div className={BeskjedCSS.tekst_wrapper}>
           <LinkPanel.Title className={BeskjedCSS.tekst}>{printTekst}</LinkPanel.Title>

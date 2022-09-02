@@ -4,11 +4,6 @@
   margin-bottom: 2rem;
 }
 
-.main > svg {
-  width: 22px;
-  height: 22px;
-}
-
 .app {
   flex-direction: column;
   display: flex;

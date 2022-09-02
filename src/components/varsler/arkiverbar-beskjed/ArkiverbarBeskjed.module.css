@@ -63,7 +63,6 @@
     grid-area: knapp;
     display: flex;
     justify-content: flex-end;
-    margin: 0 0.5rem 2rem 0;
   }
 }
 

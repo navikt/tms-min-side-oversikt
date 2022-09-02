@@ -61,6 +61,12 @@ const MIN_SIDE_PROXY_URL = {
   production: "https://www.intern.nav.no/tms-min-side-proxy/login/status",
 };
 
+const INNBOKS_URL = {
+  local: "http://localhost:3000/innboks",
+  development: "https://www.innboks.dev.nav.no",
+  production: "https://www.innboks.nav.no",
+};
+
 export const apiUrl = API_URL[getEnvironment()];
 export const dittNavApiUrl = DITTNAV_API_URL[getEnvironment()];
 export const navUrl = NAV_URL[getEnvironment()];
@@ -69,6 +75,7 @@ export const tjenesterUrl = TJENESTER_URL[getEnvironment()];
 export const personNavUrl = PERSON_NAV_URL[getEnvironment()];
 export const minSideUrl = MIN_SIDE_URL[getEnvironment()];
 export const minSideProxyUrl = MIN_SIDE_PROXY_URL[getEnvironment()];
+export const innboksUrl = INNBOKS_URL[getEnvironment()];
 
 export const meldekortinfoApiUrl = `${dittNavApiUrl}/meldekortinfo`;
 export const meldekortUrl = `${navUrl}/meldekort`;
@@ -97,7 +104,6 @@ export const sykefravaerUrl = `${navUrl}/syk/sykefravaer`;
 export const arbeidUrl = `${navUrl}/arbeid`;
 export const soknadUrl = `${navUrl}/soknader`;
 export const dinPensjonUrl = `${tjenesterUrl}/pselv/publisering/dinpensjon.jsf`;
-export const innboksUrl = "https://uat-navdialog.cs108.force.com/Innboks/s/";
 export const minInnboksUrl = "https://www.nav.no/no/ditt-nav/meldingene-dine-er-flyttet";
 export const dialogMedVeilederUrl = `${navUrl}/person/dittnav/veientilarbeid/dialog`;
 export const minSideProxyLoginStatusUrl = `${minSideProxyUrl}//login/status`;

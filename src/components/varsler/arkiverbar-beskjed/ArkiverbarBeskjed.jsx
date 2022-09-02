@@ -9,7 +9,7 @@ import { postDigisosDone, postDone } from "../../../api/api";
 import useStore from "../../../store/store";
 import { selectRemoveBeskjed } from "../../../store/selectors";
 
-const ArkiverbarBeskjed = ({ tekst, dato, isMasked, remove, beskjed }) => {
+const ArkiverbarBeskjed = ({ tekst, dato, isMasked, beskjed }) => {
   const [showArkiverIkon, setShowArkiverIkon] = useState(false);
   const translate = useIntl();
   const removeBeskjed = useStore(selectRemoveBeskjed);
@@ -41,21 +41,23 @@ const ArkiverbarBeskjed = ({ tekst, dato, isMasked, remove, beskjed }) => {
   return (
     <Panel className={BeskjedCSS.beskjed}>
       <div className={BeskjedCSS.content}>
-        <div className={BeskjedCSS.ikon}>{showArkiverIkon ? <FileFolder /> : <SpeechBubble />}</div>
+        <div className={BeskjedCSS.ikon}>
+          {showArkiverIkon ? <FileFolder fontSize="1.375rem" /> : <SpeechBubble fontSize="1.375rem" />}
+        </div>
         <div className={BeskjedCSS.tekst_wrapper}>
-          <Heading spacing level="2" size="medium" className={BeskjedCSS.tekst}>
-            {printTekst}
-          </Heading>
+          <h2 className={BeskjedCSS.tekst}>{printTekst}</h2>
           <BodyShort className={BeskjedCSS.dato}>{dato}</BodyShort>
+          <div className={BeskjedCSS.btn_wrapper}>
+            <ArkiverKnapp
+              className={BeskjedCSS.knapp}
+              mouseEnter={handleArkiverknappMouseEnter}
+              mouseLeave={handleArkiverknappMouseLeave}
+              remove={requestDone}
+              beskjed={beskjed}
+            />
+          </div>
         </div>
       </div>
-      <ArkiverKnapp
-        className={BeskjedCSS.knapp}
-        mouseEnter={handleArkiverknappMouseEnter}
-        mouseLeave={handleArkiverknappMouseLeave}
-        remove={requestDone}
-        beskjed={beskjed}
-      />
     </Panel>
   );
 };

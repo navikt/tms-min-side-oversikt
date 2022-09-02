@@ -8,9 +8,8 @@ import { postDigisosDone, postDone } from "../../../api/api";
 import useStore from "../../../store/store";
 import { selectRemoveBeskjed } from "../../../store/selectors";
 
-const Beskjed = ({ tekst, dato, href, isMasked, remove, beskjed }) => {
+const Beskjed = ({ tekst, dato, href, isMasked, beskjed }) => {
   const translate = useIntl();
-  const removeBeskjed = useStore(selectRemoveBeskjed);
 
   const printTekst = isMasked ? translate.formatMessage({ id: "beskjed.maskert.tekst" }) : tekst;
 
@@ -27,7 +26,6 @@ const Beskjed = ({ tekst, dato, href, isMasked, remove, beskjed }) => {
         eventId: beskjed.eventId,
       });
     }
-    // removeBeskjed(beskjed);
   };
 
   const handleOnClick = () => {
@@ -41,12 +39,12 @@ const Beskjed = ({ tekst, dato, href, isMasked, remove, beskjed }) => {
         style={{
           display: "grid",
           gridAutoFlow: "column",
-          gap: "var(--navds-spacing-8)",
+          gap: "var(--navds-spacing-6)",
           alignItems: "center",
         }}
       >
         <div className={BeskjedCSS.ikon_wrapper}>
-          <SpeechBubble />
+          <SpeechBubble fontSize="1.375rem" />
         </div>
         <div className={BeskjedCSS.tekst_wrapper}>
           <LinkPanel.Title className={BeskjedCSS.tekst}>{printTekst}</LinkPanel.Title>

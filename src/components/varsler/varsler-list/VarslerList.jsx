@@ -5,8 +5,6 @@ import { selectAddBeskjederList, selectBeskjederList } from "../../../store/sele
 import { sortByEventTidspunkt } from "../../../utils/sorter";
 import isMasked from "../../../utils/isMasked";
 import useStore from "../../../store/store";
-import { selectRemoveBeskjed } from "../../../store/selectors";
-import { postDigisosDone, postDone } from "../../../api/api";
 import { formatToReadableDate, setLocaleDate } from "../../../language/i18n";
 import Oppgave from "../../varsler/oppgave/Oppgave";
 import Beskjed from "../../varsler/beskjed/Beskjed";
@@ -37,7 +35,6 @@ const VarslerList = () => {
               tekst={o.tekst}
               dato={formatToReadableDate(o.forstBehandlet)}
               href={o.link}
-              type="oppgave"
               isMasked={isMasked(o?.tekst)}
             />
           ))}
@@ -51,7 +48,6 @@ const VarslerList = () => {
                 dato={formatToReadableDate(b.forstBehandlet)}
                 href={b.link}
                 isMasked={isMasked(b?.tekst)}
-                remove={null}
                 beskjed={b}
               />
             ) : (
@@ -60,7 +56,6 @@ const VarslerList = () => {
                 dato={formatToReadableDate(b.forstBehandlet)}
                 href={b.link}
                 isMasked={isMasked(b?.tekst)}
-                remove={null}
                 beskjed={b}
               />
             )

@@ -18,12 +18,12 @@ const Oppgave = ({ tekst, dato, href, isMasked }) => {
         style={{
           display: "grid",
           gridAutoFlow: "column",
-          gap: "var(--navds-spacing-8)",
+          gap: "var(--navds-spacing-6)",
           alignItems: "center",
         }}
       >
         <div className={OppgaveCSS.ikon_wrapper}>
-          <Task />
+          <Task fontSize="1.375rem" />
         </div>
         <div className={OppgaveCSS.tekst_wrapper}>
           <LinkPanel.Title className={OppgaveCSS.tekst}>{printTekst}</LinkPanel.Title>

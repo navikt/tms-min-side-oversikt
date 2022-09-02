@@ -63,7 +63,7 @@ const MIN_SIDE_PROXY_URL = {
 
 const INNBOKS_URL = {
   local: "http://localhost:3000/innboks",
-  development: "https://www.innboks.dev.nav.no",
+  development: "https://uat-navdialog.cs108.force.com/Innboks/s/",
   production: "https://www.innboks.nav.no",
 };
 

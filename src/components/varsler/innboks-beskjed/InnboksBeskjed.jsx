@@ -19,7 +19,7 @@ const InnboksBeskjed = ({ innboksBeskjeder }) => {
 
   const printTekst = needStepup ? translate.formatMessage({ id: "beskjed.maskert.tekst" }) : tempTekst;
 
-  const lenke = needStepup ? loginserviceStepUpUrl : innboksUrl;
+  const lenke = needStepup ? loginserviceStepUpUrl : gruppert ? innboksUrl : innboksBeskjeder[0]?.link;
 
   const skalViseDato = !needStepup && !gruppert;
   const dato = skalViseDato ? formatToReadableDate(innboksBeskjeder[0]?.forstBehandlet) : null;

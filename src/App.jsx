@@ -12,11 +12,11 @@ function App() {
       <div className={CSS.app}>
         <section className="page-wrapper-microfrontend">
           <Sidetittel />
-          <section className={CSS.varsler}>
+          <ul className={CSS.varsler}>
             <Meldekort />
             <VarslerList />
             <EtterregistreringMeldekort />
-          </section>
+          </ul>
           <InngangVarslinger />
         </section>
       </div>

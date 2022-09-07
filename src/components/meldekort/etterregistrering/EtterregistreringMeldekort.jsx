@@ -20,7 +20,11 @@ const EtterregistreringMeldekort = () => {
   }
 
   if (meldekort.etterregistrerteMeldekort && meldekort.etterregistrerteMeldekort > 0) {
-    return <Oppgave tekst={tekst} href={etterregistreringMeldekortUrl} />;
+    return (
+      <li key={"meldekort-etterregistrering-varsel"}>
+        <Oppgave tekst={tekst} href={etterregistreringMeldekortUrl} />
+      </li>
+    );
   }
   return null;
 };

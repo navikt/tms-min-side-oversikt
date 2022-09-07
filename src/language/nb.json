@@ -11,49 +11,14 @@
 
   "innboks.flere.meldinger": "Du har {count} meldinger i din innboks",
 
-  "mininnboks.dokument_varsel.meldinger.en": "Du har ett ulest dokument i brev og vedtak",
-  "mininnboks.dokument_varsel.meldinger.flere": "Du har {count} uleste dokumenter i brev og vedtak",
-  "mininnboks.oppgave_varsel.meldinger.en": "Du har én ulest oppgave",
-  "mininnboks.oppgave_varsel.meldinger.flere": "Du har {count} uleste oppgaver",
-  "mininnboks.ulest.meldinger.en": "Du har én ulest melding i din innboks",
-  "mininnboks.ulest.meldinger.flere": "Du har {count} uleste meldinger i din innboks",
-  "mininnboks.ubesvart.meldinger.en": "Du har ett ubesvart spørsmål i din innboks",
-  "mininnboks.ubesvart.meldinger.flere": "Du har {count} ubesvarte spørsmål i din innboks",
-
   "saksoversikt.soknad.en": "Du har en søknad som du ikke har sendt",
   "saksoversikt.soknad.flere": "Du har {count} søknader som du ikke har sendt",
 
-  "dittnav.infomeldinger.inngang.varslinger": "Tidligere oppgaver og beskjeder",
-
-  "korona.tilbakebetaling.lenketekst": "Status på tilbakebetaling av forskudd på dagpenger",
-  "korona.tilbakebetaling.ingress": "Her kan du som har fått forskudd på dagpenger se restbeløp og se eller velge tilbakebetalingsplan.",
-  "korona.varsel.lenketekst": "Koronavirus - hva gjelder i min situasjon?",
-  "korona.varsel.ingress": "Se informasjon om rettighetene dine.",
-
-  "utbetalinger.lenketekst": "Dine utbetalinger",
-
-  "lenkepanel.venstre.tittel": "Dine siste saker",
-  "lenkepanel.venstre.lenketekst.dagpenger": "Dagpenger og oppfølging",
-  "lenkepanel.venstre.lenketekst.arbeidsavklaringspenger": "Arbeidsavklaringspenger og oppfølging",
-  "lenkepanel.venstre.lenketekst.se.saker": "Se alle dine saker",
-  "lenkepanel.venstre.lenkedetail": "Sist oppdatert: ",
-
-  "lenkepanel.hoyre.tittel": "Kommunikasjon med Nav",
-  "lenkepanel.hoyre.lenketekst.innboks": "Innboks",
-  "lenkepanel.hoyre.ingress.innboks": "Informasjon fra NAV og svar på henvendelser og referater fra samtaler du har på telefon, chat og \"Skriv til oss\".",
-  "lenkepanel.hoyre.lenketekst.dialog": "Dialog med den lokale veilederen din",
-  "lenkepanel.hoyre.ingress.dialog": "For arbeidssøkere og de som mottar AAP. Les meldinger, referater og send melding til veilederen din.",
-  "lenkepanel.hoyre.lenketekst.brevogvedtak": "Brev og vedtak",
-  "lenkepanel.hoyre.ingress.brevogvedtak": "For deg som ikke har Digipost eller e-Boks.",
+  "inngang.varslinger": "Tidligere oppgaver og beskjeder",
 
   "oppgave.maskert.tekst": "Du har fått en oppgave, logg inn med høyere sikkerhetsnivå for å se oppgaven.",
   "beskjed.maskert.tekst": "Du har fått en melding, logg inn med høyere sikkerhetsnivå for å se meldingen.",
   "dine.siste.saker": "Dine siste saker",
-
-  "generellefliser.sykefravaer-tittel": "Ditt sykefravær",
-  "generellefliser.mistet.jobb-tittel": "Mistet jobben?",
-  "generellefliser.skjemaer-tittel": "Skjemaer",
-  "generellefliser.pensjon-tittel": "Din pensjon",
 
   "sidetittel.hilsning": "Hei ",
   "sidetittel.hilsning.morgen": "God morgen ",

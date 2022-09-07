@@ -28,7 +28,7 @@ const InngangVarslinger = () => {
           href={minSideVarslingerUrl}
           onClick={() => logAmplitudeEvent(komponent.inngangVarslinger)}
         >
-          {translate.formatMessage({ id: "dittnav.infomeldinger.inngang.varslinger" })}
+          {translate.formatMessage({ id: "inngang.varslinger" })}
         </a>
       )}
     </>

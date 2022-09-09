@@ -19,6 +19,12 @@ const NAV_URL = {
   production: "https://www.nav.no",
 };
 
+const MELDEKORT_NAV_URL = {
+  local: "http://localhost:3000",
+  development: "https://meldekort-frontend-q1.dev.nav.no",
+  production: "https://www.nav.no",
+};
+
 const API_URL = {
   local: "http://localhost:3000/api/endpoint",
   development: "https://person.dev.nav.no/api/endpoint",
@@ -70,6 +76,7 @@ const INNBOKS_URL = {
 export const apiUrl = API_URL[getEnvironment()];
 export const dittNavApiUrl = DITTNAV_API_URL[getEnvironment()];
 export const navUrl = NAV_URL[getEnvironment()];
+export const meldekortNavUrl = MELDEKORT_NAV_URL[getEnvironment()];
 export const loginserviceUrl = LOGINSERVICE_URL[getEnvironment()];
 export const tjenesterUrl = TJENESTER_URL[getEnvironment()];
 export const personNavUrl = PERSON_NAV_URL[getEnvironment()];
@@ -78,8 +85,8 @@ export const minSideProxyUrl = MIN_SIDE_PROXY_URL[getEnvironment()];
 export const innboksUrl = INNBOKS_URL[getEnvironment()];
 
 export const meldekortinfoApiUrl = `${dittNavApiUrl}/meldekortinfo`;
-export const meldekortUrl = `${navUrl}/meldekort`;
-export const etterregistreringMeldekortUrl = `${navUrl}/meldekort/etterregistrer-meldekort`;
+export const meldekortUrl = `${meldekortNavUrl}/meldekort`;
+export const etterregistreringMeldekortUrl = `${meldekortNavUrl}/meldekort/etterregistrer-meldekort#`;
 export const oppgaverApiUrl = `${dittNavApiUrl}/oppgave`;
 export const beskjederApiUrl = `${dittNavApiUrl}/beskjed`;
 export const innboksApiUrl = `${dittNavApiUrl}/innboks`;

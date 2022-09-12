@@ -27,9 +27,8 @@ const VarslerList = () => {
   return (
     <>
       {oppgaver &&
-        oppgaver
-          ?.sort(sortByEventTidspunkt)
-          .map((o) => (
+        oppgaver?.sort(sortByEventTidspunkt).map((o) => (
+          <li key={o.eventId}>
             <Oppgave
               id={o.eventId}
               tekst={o.tekst}
@@ -37,12 +36,12 @@ const VarslerList = () => {
               href={o.link}
               isMasked={isMasked(o?.tekst)}
             />
-          ))}
+          </li>
+        ))}
       {beskjeder &&
-        beskjeder
-          .sort(sortByEventTidspunkt)
-          .map((b) =>
-            hasNoHref(b.link) ? (
+        beskjeder.sort(sortByEventTidspunkt).map((b) =>
+          hasNoHref(b.link) ? (
+            <li key={b.eventId}>
               <ArkiverbarBeskjed
                 tekst={b.tekst}
                 dato={formatToReadableDate(b.forstBehandlet)}
@@ -50,7 +49,9 @@ const VarslerList = () => {
                 isMasked={isMasked(b?.tekst)}
                 beskjed={b}
               />
-            ) : (
+            </li>
+          ) : (
+            <li key={b.eventId}>
               <Beskjed
                 tekst={b.tekst}
                 dato={formatToReadableDate(b.forstBehandlet)}
@@ -58,9 +59,14 @@ const VarslerList = () => {
                 isMasked={isMasked(b?.tekst)}
                 beskjed={b}
               />
-            )
-          )}
-      {innboks && innboks?.length > 0 ? <InnboksBeskjed innboksBeskjeder={innboks} /> : null}
+            </li>
+          )
+        )}
+      {innboks && innboks?.length > 0 ? (
+        <li key={"innboks-varsel"}>
+          <InnboksBeskjed innboksBeskjeder={innboks} />
+        </li>
+      ) : null}
     </>
   );
 };

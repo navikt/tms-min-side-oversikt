@@ -64,11 +64,19 @@ const Meldekort = () => {
   // dato property = dato på andre meldinger, men for meldekort skal dato byttes ut med en tekst angående feriedager
 
   if (isPendingForInnsending) {
-    return <Beskjed tekst={overskrift} dato={feriedager} href={meldekortUrl} id="meldekort-notifikasjon" />;
+    return (
+      <li key={"meldekort-varsel"}>
+        <Beskjed tekst={overskrift} dato={feriedager} href={meldekortUrl} id="meldekort-notifikasjon" />
+      </li>
+    );
   }
 
   if (isReadyForInnsending) {
-    return <Oppgave tekst={overskrift} dato={feriedager} href={meldekortUrl} id="meldekort-notifikasjon" />;
+    return (
+      <li key={"meldekort-varsel"}>
+        <Oppgave tekst={overskrift} dato={feriedager} href={meldekortUrl} id="meldekort-notifikasjon" />
+      </li>
+    );
   }
 
   return null;

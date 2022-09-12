@@ -45,14 +45,6 @@ export default [
           sistOppdatert: "2020-03-13T08:53:31.969676Z",
           sikkerhetsnivaa: 3,
         },
-        {
-          forstBehandlet: "2020-03-13T09:03:09.348Z",
-          eventId: "1584093789348",
-          tekst: "Samtalereferat fra telefonsamtale 08.12.2019 kl. 11:44",
-          link: "https://enNyLenke",
-          sistOppdatert: "2020-03-13T09:03:09.555557Z",
-          sikkerhetsnivaa: 4,
-        },
       ];
     },
   },

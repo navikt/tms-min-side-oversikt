@@ -14,8 +14,8 @@ function App() {
           <Sidetittel />
           <ul className={CSS.varsler}>
             <Meldekort />
-            <VarslerList />
             <EtterregistreringMeldekort />
+            <VarslerList />
           </ul>
           <InngangVarslinger />
         </section>

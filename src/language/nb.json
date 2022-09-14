@@ -20,7 +20,7 @@
   "beskjed.maskert.tekst": "Du har fått en melding, logg inn med høyere sikkerhetsnivå for å se meldingen.",
   "dine.siste.saker": "Dine siste saker",
 
-  "sidetittel.hilsning": "Hei ",
-  "sidetittel.hilsning.morgen": "God morgen ",
-  "sidetittel.hilsning.kveld": "God kveld "
+  "sidetittel.velkomsthilsen": "Hei ",
+  "sidetittel.velkomsthilsen.morgen": "God morgen ",
+  "sidetittel.velkomsthilsen.kveld": "God kveld "
 }

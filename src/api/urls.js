@@ -92,7 +92,7 @@ export const paabegynteSoknaderApiUrl = `${dittNavApiUrl}/saker/paabegynte`;
 export const ubehandledeMeldingerApiUrl = `${dittNavApiUrl}/meldinger/ubehandlede`;
 export const sakerApiUrl = `${dittNavApiUrl}/saker`;
 export const innloggingsstatusUrl = `${navUrl}/person/innloggingsstatus`;
-export const loginserviceStepUpUrl = `${loginserviceUrl}/login?level=Level4&redirect=https://www.nav.no/person/dittnav`;
+export const loginserviceStepUpUrl = `${loginserviceUrl}/login?level=Level4&redirect=https://www.nav.no/minside`;
 export const tilbakebetalingsUrl = `${navUrl}/dagpenger/forskudd/oversikt`;
 export const koronaVeiviserUrl = `${navUrl}/person/koronaveiviser`;
 export const utbetalingsoversiktUrl = `${navUrl}/utbetalingsoversikt`;

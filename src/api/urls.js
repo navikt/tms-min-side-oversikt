@@ -27,8 +27,8 @@ const API_URL = {
 
 const DITTNAV_API_URL = {
   local: "http://localhost:3000/dittnav-api",
-  development: "https://person.dev.nav.no/dittnav-api",
-  production: "https://person.nav.no/dittnav-api",
+  development: "https://www.dev.nav.no/dittnav-api",
+  production: "https://www.nav.no/dittnav-api",
 };
 
 const LOGINSERVICE_URL = {
@@ -52,13 +52,19 @@ const PERSON_NAV_URL = {
 const MIN_SIDE_URL = {
   local: "http://localhost:3000/minside",
   development: "https://www.dev.nav.no/minside",
-  production: "https://www.intern.nav.no/minside",
+  production: "https://www.nav.no/minside",
 };
 
 const MIN_SIDE_PROXY_URL = {
   local: "http://localhost:3000/login/status",
   development: "https://www.dev.nav.no/tms-min-side-proxy",
   production: "https://www.intern.nav.no/tms-min-side-proxy/login/status",
+};
+
+const INNBOKS_URL = {
+  local: "http://localhost:3000/innboks",
+  development: "https://uat-navdialog.cs108.force.com/Innboks/s/",
+  production: "https://www.innboks.nav.no",
 };
 
 export const apiUrl = API_URL[getEnvironment()];
@@ -69,9 +75,11 @@ export const tjenesterUrl = TJENESTER_URL[getEnvironment()];
 export const personNavUrl = PERSON_NAV_URL[getEnvironment()];
 export const minSideUrl = MIN_SIDE_URL[getEnvironment()];
 export const minSideProxyUrl = MIN_SIDE_PROXY_URL[getEnvironment()];
+export const innboksUrl = INNBOKS_URL[getEnvironment()];
 
 export const meldekortinfoApiUrl = `${dittNavApiUrl}/meldekortinfo`;
 export const meldekortUrl = `${navUrl}/meldekort`;
+export const etterregistreringMeldekortUrl = `${navUrl}/meldekort/etterregistrer-meldekort`;
 export const oppgaverApiUrl = `${dittNavApiUrl}/oppgave`;
 export const beskjederApiUrl = `${dittNavApiUrl}/beskjed`;
 export const innboksApiUrl = `${dittNavApiUrl}/innboks`;
@@ -84,7 +92,7 @@ export const paabegynteSoknaderApiUrl = `${dittNavApiUrl}/saker/paabegynte`;
 export const ubehandledeMeldingerApiUrl = `${dittNavApiUrl}/meldinger/ubehandlede`;
 export const sakerApiUrl = `${dittNavApiUrl}/saker`;
 export const innloggingsstatusUrl = `${navUrl}/person/innloggingsstatus`;
-export const loginserviceStepUpUrl = `${loginserviceUrl}/login?level=Level4&redirect=https://www.nav.no/person/dittnav`;
+export const loginserviceStepUpUrl = `${loginserviceUrl}/login?level=Level4&redirect=https://www.nav.no/minside`;
 export const tilbakebetalingsUrl = `${navUrl}/dagpenger/forskudd/oversikt`;
 export const koronaVeiviserUrl = `${navUrl}/person/koronaveiviser`;
 export const utbetalingsoversiktUrl = `${navUrl}/utbetalingsoversikt`;
@@ -96,7 +104,6 @@ export const sykefravaerUrl = `${navUrl}/syk/sykefravaer`;
 export const arbeidUrl = `${navUrl}/arbeid`;
 export const soknadUrl = `${navUrl}/soknader`;
 export const dinPensjonUrl = `${tjenesterUrl}/pselv/publisering/dinpensjon.jsf`;
-export const innboksUrl = "https://uat-navdialog.cs108.force.com/Innboks/s/";
 export const minInnboksUrl = "https://www.nav.no/no/ditt-nav/meldingene-dine-er-flyttet";
 export const dialogMedVeilederUrl = `${navUrl}/person/dittnav/veientilarbeid/dialog`;
 export const minSideProxyLoginStatusUrl = `${minSideProxyUrl}//login/status`;

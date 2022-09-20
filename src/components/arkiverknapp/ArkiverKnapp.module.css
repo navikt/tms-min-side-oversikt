@@ -1,0 +1,20 @@
+.btn {
+  color: #0067c5;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  border-radius: 2px;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  border: none;
+  background-color: transparent;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #0067c5;
+}

@@ -9,7 +9,7 @@ const checkResponse = (response) => {
 export const fetcher = async ({ queryKey }) => {
   const response = await fetch(queryKey, {
     method: "GET",
-    credentials: "include",
+    credentials: "same-origin",
   });
   checkResponse(response);
 
@@ -20,7 +20,7 @@ const postJSON = (url, content) =>
   new Promise((resolve, reject) => {
     fetch(url, {
       method: "POST",
-      credentials: "include",
+      credentials: "same-origin",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -32,6 +32,6 @@ const postJSON = (url, content) =>
       .catch((e) => reject(e));
   });
 
-export const postDone = (content) => postJSON(postDigiSosDoneUrl, content);
+export const postDone = (content) => postJSON(postDoneUrl, content);
 
-export const postDigisosDone = (content) => postJSON(postDoneUrl, content);
+export const postDigisosDone = (content) => postJSON(postDigiSosDoneUrl, content);

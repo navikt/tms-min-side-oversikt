@@ -1,0 +1,20 @@
+.tekst {
+  text-transform: capitalize;
+  margin: 0 !important;
+}
+
+.hilsning {
+  color: var(--navds-semantic-color-text-muted);
+}
+
+@media (min-width: 0px) {
+  .wrapper {
+    margin: 1rem 0 2rem 0.5rem;
+  }
+}
+
+@media (min-width: 648px) {
+  .wrapper {
+    margin: 1rem 0 2rem 0.5rem;
+  }
+}

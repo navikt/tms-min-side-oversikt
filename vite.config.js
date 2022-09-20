@@ -41,7 +41,7 @@ export default ({ command }) => ({
       entry: resolve(__dirname, "src/Mikrofrontend.jsx"),
       name: "tms-min-side-oversikt",
       formats: ["es"],
-      fileName: () => `bundle.js`,
+      fileName: () => "bundle.js",
     },
   },
   test: {
@@ -49,6 +49,11 @@ export default ({ command }) => ({
     environment: "jsdom",
     deps: {
       inline: ["@testing-library/user-event"],
+    },
+  },
+  css: {
+    modules: {
+      generateScopedName: "[name]__[local]___[hash:base64:5]",
     },
   },
 });

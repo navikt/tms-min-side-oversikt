@@ -1,17 +1,23 @@
-import React from "react";
+import { useQuery } from "react-query";
+import { fetcher } from "../../api/api";
 import { useIntl } from "react-intl";
-import { meldekortUrl } from "../../api/urls";
+import { meldekortinfoApiUrl, meldekortUrl } from "../../api/urls";
 import i18n from "../../language/i18n";
-import NotifikasjonsBoks from "../notifikasjoner/notifikasjonsBoks/NotifikasjonsBoks";
+import Beskjed from "../varsler/beskjed/Beskjed";
+import Oppgave from "../varsler/oppgave/Oppgave";
 
-const Meldekort = ({ meldekort }) => {
+const Meldekort = () => {
+  const { data: meldekort, isLoading } = useQuery(meldekortinfoApiUrl, fetcher);
   const translate = useIntl();
   const { formatDateMonth, formatDayAndMonth, numberToWord } = i18n[translate.locale];
-  const isMeldekortBruker = meldekort?.meldekortbruker;
 
-  //gamle klarForInnsending
-  const showIngress = meldekort?.nyeMeldekort?.antallNyeMeldekort > 0;
-  const type = showIngress ? "oppgave" : "beskjed";
+  if (isLoading) {
+    return null;
+  }
+
+  const isMeldekortBruker = meldekort?.meldekortbruker;
+  const isPendingForInnsending = isMeldekortBruker && meldekort?.nyeMeldekort?.nesteInnsendingAvMeldekort;
+  const isReadyForInnsending = isMeldekortBruker && meldekort?.nyeMeldekort?.antallNyeMeldekort > 0;
 
   const fremtidig = meldekort?.nyeMeldekort?.nesteInnsendingAvMeldekort
     ? translate.formatMessage(
@@ -19,6 +25,7 @@ const Meldekort = ({ meldekort }) => {
         { dato: formatDateMonth(meldekort?.nyeMeldekort?.nesteInnsendingAvMeldekort) }
       )
     : "";
+
   const melding = meldekort?.nyeMeldekort?.nesteMeldekort
     ? translate.formatMessage(
         {
@@ -44,7 +51,7 @@ const Meldekort = ({ meldekort }) => {
     ? translate.formatMessage({ id: "meldekort.trekk" })
     : "";
 
-  const overskrift = showIngress ? fremtidig + melding + trekk + advarsel : fremtidig + advarsel;
+  const overskrift = isReadyForInnsending ? fremtidig + melding + trekk + advarsel : fremtidig + advarsel;
 
   const feriedager =
     meldekort?.resterendeFeriedager > 0
@@ -54,26 +61,25 @@ const Meldekort = ({ meldekort }) => {
         })
       : "";
 
-  const isEtterregistrering = meldekort?.etterregistrerteMeldekort == 0;
-  const overskriftIfEtterregistrering = translate.formatMessage(
-    { id: "meldekort.etterregistreringer" },
-    { etterregistreringer: numberToWord(meldekort?.etterregistrerteMeldekort) }
-  );
+  // dato property = dato på andre meldinger, men for meldekort skal dato byttes ut med en tekst angående feriedager
 
-  //dato property = dato på andre meldinger, men for meldekort skal dato byttes ut med en tekst angående feriedager
-  return (
-    <>
-      {isMeldekortBruker ? (
-        <NotifikasjonsBoks
-          tekst={isEtterregistrering ? overskriftIfEtterregistrering : overskrift}
-          dato={isEtterregistrering ? "" : feriedager}
-          type={isEtterregistrering ? "oppgave" : type}
-          href={meldekortUrl}
-          id="meldekort-notifikasjon"
-        />
-      ) : null}
-    </>
-  );
+  if (isPendingForInnsending) {
+    return (
+      <li key={"meldekort-varsel"}>
+        <Beskjed tekst={overskrift} dato={feriedager} href={meldekortUrl} id="meldekort-notifikasjon" />
+      </li>
+    );
+  }
+
+  if (isReadyForInnsending) {
+    return (
+      <li key={"meldekort-varsel"}>
+        <Oppgave tekst={overskrift} dato={feriedager} href={meldekortUrl} id="meldekort-notifikasjon" />
+      </li>
+    );
+  }
+
+  return null;
 };
 
 export default Meldekort;

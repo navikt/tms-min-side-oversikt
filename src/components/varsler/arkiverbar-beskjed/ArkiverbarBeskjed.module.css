@@ -1,0 +1,97 @@
+.beskjed {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tekst_wrapper {
+  display: grid;
+  margin-left: 1.4rem;
+}
+
+.tekst_wrapper > h2 {
+  font-size: 18px !important;
+}
+
+.tekst_wrapper > p {
+  font-size: 16px !important;
+}
+
+.ikon {
+  display: flex;
+  align-self: center;
+  overflow: visible;
+  padding: 0.8125rem;
+  margin: 0 0 0 0.5rem;
+  background-color: #cce2f0;
+  border-radius: 50%;
+  color: #262626;
+}
+
+.dato {
+  color: #707070;
+}
+
+@media (min-width: 0px) {
+  .beskjed {
+    margin-bottom: 0.25rem;
+    padding: 0.75rem 1rem !important;
+  }
+
+  .tekst_wrapper {
+    grid-template-areas:
+      "tekst tekst"
+      "dato knapp";
+  }
+
+  .tekst {
+    width: 100%;
+    margin: 0 0 0.1rem 0;
+    grid-area: tekst;
+  }
+
+  .dato {
+    grid-area: dato;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .btn_wrapper {
+    grid-area: knapp;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 648px) {
+  .tekst_wrapper {
+    grid-template-columns: 9fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .tekst {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 0.1rem;
+  }
+
+  .dato {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .btn_wrapper {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    display: flex;
+  }
+
+  .beskjed {
+    width: 37.5rem;
+    margin: 0 0 0.25rem 0;
+    padding: 1rem 1.5rem !important;
+  }
+}

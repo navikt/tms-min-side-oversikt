@@ -29,7 +29,9 @@ const Beskjed = ({ tekst, dato, href, isMasked, beskjed }) => {
   };
 
   const handleOnClick = () => {
-    requestDone(beskjed);
+    if (beskjed && !isMasked) {
+      requestDone(beskjed);
+    }
     logAmplitudeEvent("Beskjed");
   };
 

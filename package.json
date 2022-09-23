@@ -38,7 +38,7 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "rollup-plugin-import-map": "2.2.2",
-    "vite": "2.7.2",
+    "vite": "2.9.13",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-mock": "2.9.6",
     "vitest": "0.0.113"

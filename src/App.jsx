@@ -5,6 +5,7 @@ import InngangVarslinger from "./components/inngang-varslinger/InngangVarslinger
 import Meldekort from "./components/meldekort/Meldekort";
 import EtterregistreringMeldekort from "./components/meldekort/etterregistrering/EtterregistreringMeldekort";
 import { meldekortMikrofrontendUrl } from "./api/urls";
+import ErrorBoundary from "./components/error-boundary/ErrorBoundary";
 import "@navikt/ds-css";
 import CSS from "./App.module.css";
 
@@ -17,7 +18,11 @@ function App() {
         <section className="page-wrapper-microfrontend">
           <Sidetittel />
           <ul className={CSS.varsler}>
-            <MeldekortMikrofrontend />
+            <React.Suspense fallback={null}>
+              <ErrorBoundary>
+                <MeldekortMikrofrontend />
+              </ErrorBoundary>
+            </React.Suspense>
             <Meldekort />
             <EtterregistreringMeldekort />
             <VarslerList />

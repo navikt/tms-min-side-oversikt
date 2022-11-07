@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [".eslintrc.js"],
+  extends: [".eslintrc.cjs"],
   rules: {
     //TODO: enable rules
     "no-unused-vars": "off",

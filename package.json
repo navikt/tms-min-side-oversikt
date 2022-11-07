@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3000",
     "lint": "eslint --fix --ext .js,.jsx .",
     "lint:staged": "eslint -c .eslintrc.pre-commit.cjs --fix --ext .js,.jsx .",
     "build": "vite build",

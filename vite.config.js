@@ -47,9 +47,6 @@ export default ({ command }) => ({
       formats: ["es"],
       fileName: () => "bundle.js",
     },
-    server: {
-      port: 3000,
-    },
   },
   test: {
     global: true,

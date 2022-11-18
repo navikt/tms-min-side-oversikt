@@ -1,4 +1,4 @@
-name: 'push-to-cdn'
+name: 'upload-to-cdn'
 
 on:
   push:

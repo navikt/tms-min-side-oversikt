@@ -7,8 +7,8 @@ import EnvironmentPlugin from "vite-plugin-environment";
 import { rollupImportMapPlugin } from "rollup-plugin-import-map";
 import { resolve } from "path";
 
-const reactUrl = "https://www.nav.no/tms-min-side-assets/react/18/esm/index.js";
-const reactDomUrl = "https://www.nav.no/tms-min-side-assets/react-dom/18/esm/index.js";
+const reactUrl = "https://cdn.nav.no/min-side/shared/react/v18/react.production.min.js";
+const reactDomUrl = "https://cdn.nav.no/min-side/shared/react-dom/v18/react-dom.production.min.js";
 
 const imports = {
   react: reactUrl,

@@ -9,7 +9,7 @@ import ErrorBoundary from "./components/error-boundary/ErrorBoundary";
 import "@navikt/ds-css";
 import CSS from "./App.module.css";
 
-// const MeldekortMikrofrontend = React.lazy(() => import(meldekortMikrofrontendUrl));
+const MeldekortMikrofrontend = React.lazy(() => import(meldekortMikrofrontendUrl));
 
 function App() {
   return (
@@ -18,13 +18,11 @@ function App() {
         <section className="page-wrapper-microfrontend">
           <Sidetittel />
           <ul className={CSS.varsler}>
-            {/*
             <React.Suspense fallback={null}>
               <ErrorBoundary>
                 <MeldekortMikrofrontend />
               </ErrorBoundary>
             </React.Suspense>
-            */}
             <Meldekort />
             <EtterregistreringMeldekort />
             <VarslerList />

@@ -1,10 +1,13 @@
+import React from "react";
 import Sidetittel from "./components/sidetittel/Sidetittel";
 import VarslerList from "./components/varsler/varsler-list/VarslerList";
 import InngangVarslinger from "./components/inngang-varslinger/InngangVarslinger";
+import { meldekortMikrofrontendUrl } from "./api/urls";
+import ErrorBoundary from "./components/error-boundary/ErrorBoundary";
 import "@navikt/ds-css";
-import Meldekort from "./components/meldekort/Meldekort";
-import EtterregistreringMeldekort from "./components/meldekort/etterregistrering/EtterregistreringMeldekort";
 import CSS from "./App.module.css";
+
+const MeldekortMikrofrontend = React.lazy(() => import(meldekortMikrofrontendUrl));
 
 function App() {
   return (
@@ -13,8 +16,11 @@ function App() {
         <section className="page-wrapper-microfrontend">
           <Sidetittel />
           <ul className={CSS.varsler}>
-            <Meldekort />
-            <EtterregistreringMeldekort />
+            <React.Suspense fallback={null}>
+              <ErrorBoundary>
+                <MeldekortMikrofrontend />
+              </ErrorBoundary>
+            </React.Suspense>
             <VarslerList />
           </ul>
           <InngangVarslinger />

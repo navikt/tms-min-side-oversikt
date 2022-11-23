@@ -67,6 +67,12 @@ const INNBOKS_URL = {
   production: "https://innboks.nav.no",
 };
 
+const MELDEKORT_MIKROFRONTEND_URL = {
+  local: "http://localhost:3000/meldekort/bundle.js",
+  development: "https://cdn.dev.nav.no/min-side/tms-meldekort-mikrofrontend/tms-meldekort-mikrofrontend.js",
+  production: "https://cdn.nav.no/min-side/tms-meldekort-mikrofrontend/tms-meldekort-mikrofrontend.js",
+};
+
 export const apiUrl = API_URL[getEnvironment()];
 export const dittNavApiUrl = DITTNAV_API_URL[getEnvironment()];
 export const navUrl = NAV_URL[getEnvironment()];
@@ -76,6 +82,7 @@ export const personNavUrl = PERSON_NAV_URL[getEnvironment()];
 export const minSideUrl = MIN_SIDE_URL[getEnvironment()];
 export const minSideProxyUrl = MIN_SIDE_PROXY_URL[getEnvironment()];
 export const innboksUrl = INNBOKS_URL[getEnvironment()];
+export const meldekortMikrofrontendUrl = MELDEKORT_MIKROFRONTEND_URL[getEnvironment()];
 
 export const meldekortinfoApiUrl = `${dittNavApiUrl}/meldekortinfo`;
 export const meldekortUrl = `${navUrl}/meldekort`;

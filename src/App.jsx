@@ -2,8 +2,6 @@ import React from "react";
 import Sidetittel from "./components/sidetittel/Sidetittel";
 import VarslerList from "./components/varsler/varsler-list/VarslerList";
 import InngangVarslinger from "./components/inngang-varslinger/InngangVarslinger";
-import Meldekort from "./components/meldekort/Meldekort";
-import EtterregistreringMeldekort from "./components/meldekort/etterregistrering/EtterregistreringMeldekort";
 import { meldekortMikrofrontendUrl } from "./api/urls";
 import ErrorBoundary from "./components/error-boundary/ErrorBoundary";
 import "@navikt/ds-css";
@@ -23,8 +21,6 @@ function App() {
                 <MeldekortMikrofrontend />
               </ErrorBoundary>
             </React.Suspense>
-            <Meldekort />
-            <EtterregistreringMeldekort />
             <VarslerList />
           </ul>
           <InngangVarslinger />

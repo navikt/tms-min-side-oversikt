@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
-import viteCompression from "vite-plugin-compression";
 import { viteMockServe } from "vite-plugin-mock";
 import { terser } from "rollup-plugin-terser";
+import EnvironmentPlugin from "vite-plugin-environment";
 import { rollupImportMapPlugin } from "rollup-plugin-import-map";
 import { resolve } from "path";
 
@@ -20,11 +20,8 @@ export default ({ command }) => ({
     react(),
     terser(),
     cssInjectedByJsPlugin(),
-    viteCompression({
-      algorithm: "gzip",
-    }),
-    viteCompression({
-      algorithm: "brotliCompress",
+    EnvironmentPlugin({
+      NODE_ENV: process.env.NODE_ENV || "development",
     }),
     viteMockServe({
       mockPath: "mock",
@@ -41,7 +38,7 @@ export default ({ command }) => ({
       entry: resolve(__dirname, "src/Mikrofrontend.jsx"),
       name: "tms-min-side-oversikt",
       formats: ["es"],
-      fileName: () => "bundle.js",
+      fileName: () => "tms-min-side-oversikt.js",
     },
   },
   test: {

@@ -69,8 +69,8 @@ const INNBOKS_URL = {
 
 const MELDEKORT_MIKROFRONTEND_URL = {
   local: "http://localhost:3000/meldekort/bundle.js",
-  development: "https://www.dev.nav.no/meldekort-mikrofrontend/bundle.js",
-  production: "https://www.intern.nav.no/meldekort-mikrofrontend/bundle.js",
+  development: "https://cdn.dev.nav.no/min-side/tms-meldekort-mikrofrontend/tms-meldekort-mikrofrontend.js",
+  production: "https://cdn.nav.no/min-side/tms-meldekort-mikrofrontend/tms-meldekort-mikrofrontend.js",
 };
 
 export const apiUrl = API_URL[getEnvironment()];

@@ -1,0 +1,33 @@
+apiVersion: "nais.io/v1alpha1"
+kind: "Application"
+metadata:
+  name: tms-min-side-oversikt
+  namespace: min-side
+  labels:
+    team: min-side
+spec:
+  envFrom:
+    - secret: tms-min-side-oversikt-secrets
+  image: {{image}}
+  port: 7500
+  liveness:
+    path: /tms-min-side-oversikt/internal/isAlive
+    initialDelay: 10
+  readiness:
+    path: /tms-min-side-oversikt/internal/isReady
+    initialDelay: 10
+  prometheus:
+    enabled: true
+    path: /tms-min-side-oversikt/internal/metrics
+  replicas:
+    min: 2
+    max: 4
+  ingresses:
+    - "https://person.dev.nav.no/tms-min-side-oversikt"
+  resources:
+    limits:
+      cpu: "3"
+      memory: 768Mi
+    requests:
+      cpu: "50m"
+      memory: 256Mi

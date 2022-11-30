@@ -25,21 +25,11 @@ jobs:
       - name: 'Build application'
         run: 'npm run build'
 
-      - name: dev-upload
-        uses: nais/frontend-plattform-cdn-upload-action@main
+      - name: cdn-upload
+        uses: navikt/frontend/actions/cdn-upload/v1@main
         with:
-          cdn-environment: cdn.dev.nav.no
           cdn-team-name: min-side
           cache-invalidation: true
           source: ./dist/tms-min-side-oversikt.js
           destination: 'tms-min-side-oversikt'
 
-      - name: prod-upload
-        if: github.ref == 'refs/heads/main'
-        uses: nais/frontend-plattform-cdn-upload-action@main
-        with:
-          cdn-environment: cdn.nav.no
-          cdn-team-name: min-side
-          cache-invalidation: true
-          source: ./dist/tms-min-side-oversikt.js
-          destination: 'tms-min-side-oversikt'

@@ -367,4 +367,13 @@ export default [
       };
     },
   },
+  {
+    url: "/api/endpoint/utkast/antall",
+    method: "get",
+    response: () => {
+      return {
+        antall: 2,
+      };
+    },
+  },
 ];

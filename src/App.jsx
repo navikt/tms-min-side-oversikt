@@ -6,6 +6,7 @@ import { meldekortMikrofrontendUrl } from "./api/urls";
 import ErrorBoundary from "./components/error-boundary/ErrorBoundary";
 import "@navikt/ds-css";
 import CSS from "./App.module.css";
+import Utkast from "./components/utkast/Utkast";
 
 const MeldekortMikrofrontend = React.lazy(() => import(meldekortMikrofrontendUrl));
 
@@ -24,6 +25,7 @@ function App() {
             <VarslerList />
           </ul>
           <InngangVarslinger />
+          <Utkast />
         </section>
       </div>
     </main>

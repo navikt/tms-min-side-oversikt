@@ -22,5 +22,7 @@
 
   "sidetittel.velkomsthilsen": "Hei ",
   "sidetittel.velkomsthilsen.morgen": "God morgen ",
-  "sidetittel.velkomsthilsen.kveld": "God kveld "
+  "sidetittel.velkomsthilsen.kveld": "God kveld ",
+
+  "utkast.tekst": "Du har {antall} utkast"
 }

@@ -20,16 +20,16 @@ function App() {
       <div className={CSS.app}>
         <div className="page-wrapper-microfrontend">
           <Sidetittel />
+          <React.Suspense fallback={null}>
+            <ErrorBoundary>
+              <MeldekortMikrofrontend />
+            </ErrorBoundary>
+          </React.Suspense>
           <section>
             <Heading size="medium" level="2" spacing>
               {formatMessage({ id: "varsler.tittel" })}
             </Heading>
             <ul className={CSS.varsler}>
-              <React.Suspense fallback={null}>
-                <ErrorBoundary>
-                  <MeldekortMikrofrontend />
-                </ErrorBoundary>
-              </React.Suspense>
               <VarslerList />
             </ul>
           </section>

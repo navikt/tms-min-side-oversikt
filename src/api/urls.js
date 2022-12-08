@@ -73,6 +73,12 @@ const MELDEKORT_MIKROFRONTEND_URL = {
   production: "https://www.nav.no/tms-meldekort-mikrofrontend/tms-meldekort-mikrofrontend.js",
 };
 
+const UTKAST_API_URL = {
+  local: "http://localhost:3000/api/endpoint/utkast",
+  development: "https://www.dev.nav.no/tms-min-side-proxy/utkast",
+  production: "https://www.nav.no/tms-min-side-proxy/utkast",
+};
+
 export const apiUrl = API_URL[getEnvironment()];
 export const dittNavApiUrl = DITTNAV_API_URL[getEnvironment()];
 export const navUrl = NAV_URL[getEnvironment()];
@@ -83,6 +89,7 @@ export const minSideUrl = MIN_SIDE_URL[getEnvironment()];
 export const minSideProxyUrl = MIN_SIDE_PROXY_URL[getEnvironment()];
 export const innboksUrl = INNBOKS_URL[getEnvironment()];
 export const meldekortMikrofrontendUrl = MELDEKORT_MIKROFRONTEND_URL[getEnvironment()];
+export const utkastApiUrl = UTKAST_API_URL[getEnvironment()];
 
 export const meldekortinfoApiUrl = `${dittNavApiUrl}/meldekortinfo`;
 export const meldekortUrl = `${navUrl}/meldekort`;
@@ -115,3 +122,5 @@ export const minInnboksUrl = "https://www.nav.no/no/ditt-nav/meldingene-dine-er-
 export const dialogMedVeilederUrl = `${navUrl}/person/dittnav/veientilarbeid/dialog`;
 export const minSideProxyLoginStatusUrl = `${minSideProxyUrl}//login/status`;
 export const minSideVarslingerUrl = `${minSideUrl}/varslinger`;
+export const antallUtkastUrl = `${utkastApiUrl}/antall`;
+export const minSideUtkastUrl = `${minSideUrl}/utkast`;

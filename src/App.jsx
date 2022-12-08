@@ -18,22 +18,24 @@ function App() {
   return (
     <main className={CSS.main}>
       <div className={CSS.app}>
-        <section className="page-wrapper-microfrontend">
+        <div className="page-wrapper-microfrontend">
           <Sidetittel />
-          <Heading size="medium" level="2" spacing>
-            {formatMessage({ id: "varsler.tittel" })}
-          </Heading>
-          <ul className={CSS.varsler}>
-            <React.Suspense fallback={null}>
-              <ErrorBoundary>
-                <MeldekortMikrofrontend />
-              </ErrorBoundary>
-            </React.Suspense>
-            <VarslerList />
-          </ul>
+          <section>
+            <Heading size="medium" level="2" spacing>
+              {formatMessage({ id: "varsler.tittel" })}
+            </Heading>
+            <ul className={CSS.varsler}>
+              <React.Suspense fallback={null}>
+                <ErrorBoundary>
+                  <MeldekortMikrofrontend />
+                </ErrorBoundary>
+              </React.Suspense>
+              <VarslerList />
+            </ul>
+          </section>
           <InngangVarslinger />
           <Utkast />
-        </section>
+        </div>
       </div>
     </main>
   );

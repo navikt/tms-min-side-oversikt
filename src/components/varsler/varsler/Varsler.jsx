@@ -11,7 +11,6 @@ import Beskjed from "../../varsler/beskjed/Beskjed";
 import ArkiverbarBeskjed from "../../varsler/arkiverbar-beskjed/ArkiverbarBeskjed";
 import InnboksBeskjed from "../innboks-beskjed/InnboksBeskjed";
 import { Heading } from "@navikt/ds-react";
-import React from "react";
 import { useIntl } from "react-intl";
 import CSS from "../../../App.module.css";
 
@@ -27,10 +26,15 @@ const Varsler = () => {
 
   const { formatMessage } = useIntl();
   const isLoadingVarsler = isLoadingBeskjeder || isLoadingOppgaver || isLoadingInnboks;
+  const hasNoVarsler = oppgaver?.length === 0 && beskjeder?.length === 0 && innboks?.length === 0;
   const hasNoHref = (href) => href === undefined || href === null || href === "";
   setLocaleDate();
 
   if (isLoadingVarsler) {
+    return null;
+  }
+
+  if (hasNoVarsler) {
     return null;
   }
 

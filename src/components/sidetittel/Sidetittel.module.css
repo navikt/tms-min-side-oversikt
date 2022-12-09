@@ -9,12 +9,12 @@
 
 @media (min-width: 0px) {
   .wrapper {
-    margin: 1rem 0 2rem 0.5rem;
+    margin: 1rem 0 2rem 0;
   }
 }
 
 @media (min-width: 648px) {
   .wrapper {
-    margin: 1rem 0 2rem 0.5rem;
+    margin: 1rem 0 2rem 0;
   }
 }

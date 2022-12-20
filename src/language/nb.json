@@ -25,5 +25,7 @@
   "sidetittel.velkomsthilsen.morgen": "God morgen ",
   "sidetittel.velkomsthilsen.kveld": "God kveld ",
 
-  "utkast.tekst": "Du har {antall} utkast"
+  "utkast.tittel": "Utkast",
+  "utkast.ingress.entall": "En påbegynt søknad",
+  "utkast.ingress.flertall": "{antall} påbegynte søknader"
 }

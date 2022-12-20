@@ -27,17 +27,15 @@
   line-height: normal !important;
 }
 
-.dato {
-  font-size: 16px !important;
-  margin: 0 0 0 0 !important;
-  color: #707070;
+.ingress {
+  margin: 0 !important;
 }
 
 .ikon_wrapper {
   display: flex;
   align-self: center;
   overflow: visible;
-  padding: 0.8125rem;
+  padding: 15px;
   background-color: #e6f1f8;
   border-radius: 50%;
   color: #262626;

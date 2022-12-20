@@ -10,7 +10,9 @@ const Utkast = () => {
   const { data: data } = useQuery(antallUtkastUrl, fetcher);
   const translate = useIntl();
 
-  const showUtkast = data?.antall > 0;
+  const antallUtkast = data?.antall;
+  const showUtkast = antallUtkast > 0;
+  const isEntall = antallUtkast === 1;
 
   return (
     <>
@@ -29,8 +31,13 @@ const Utkast = () => {
             </div>
             <div className={style.tekst_wrapper}>
               <LinkPanel.Title className={style.tekst}>
-                {translate.formatMessage({ id: "utkast.tekst" }, { antall: data?.antall })}
+                {translate.formatMessage({ id: "utkast.tittel" })}
               </LinkPanel.Title>
+              <LinkPanel.Description className={style.ingress}>
+                {isEntall
+                  ? translate.formatMessage({ id: "utkast.ingress.entall" })
+                  : translate.formatMessage({ id: "utkast.ingress.flertall" }, { antall: data?.antall })}
+              </LinkPanel.Description>
             </div>
           </div>
         </LinkPanel>

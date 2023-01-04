@@ -75,8 +75,8 @@ const MELDEKORT_MIKROFRONTEND_URL = {
 
 const UTKAST_API_URL = {
   local: "http://localhost:3000/api/endpoint/utkast",
-  development: "https://www.dev.nav.no/tms-min-side-proxy/utkast",
-  production: "https://www.nav.no/tms-min-side-proxy/utkast",
+  development: "https://www.dev.nav.no/tms-min-side-proxy/utkast/utkast",
+  production: "https://www.nav.no/tms-min-side-proxy/utkast/utkast",
 };
 
 export const apiUrl = API_URL[getEnvironment()];

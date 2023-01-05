@@ -79,6 +79,12 @@ const UTKAST_API_URL = {
   production: "https://www.nav.no/tms-min-side-proxy/utkast/utkast",
 };
 
+const DIGISOS_UTKAST_API_URL = {
+  local: "http://localhost:3000/api/endpoint/digisos/utkast/antall",
+  development: "https://www.dev.nav.no/dittnav-api/digisos/utkast/antall",
+  production: "https://www.nav.no/dittnav-api/digisos/utkast/antall",
+};
+
 export const apiUrl = API_URL[getEnvironment()];
 export const dittNavApiUrl = DITTNAV_API_URL[getEnvironment()];
 export const navUrl = NAV_URL[getEnvironment()];
@@ -90,6 +96,7 @@ export const minSideProxyUrl = MIN_SIDE_PROXY_URL[getEnvironment()];
 export const innboksUrl = INNBOKS_URL[getEnvironment()];
 export const meldekortMikrofrontendUrl = MELDEKORT_MIKROFRONTEND_URL[getEnvironment()];
 export const utkastApiUrl = UTKAST_API_URL[getEnvironment()];
+export const digisosUtkastApiUrl = DIGISOS_UTKAST_API_URL[getEnvironment()];
 
 export const meldekortinfoApiUrl = `${dittNavApiUrl}/meldekortinfo`;
 export const meldekortUrl = `${navUrl}/meldekort`;

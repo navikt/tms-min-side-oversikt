@@ -2,15 +2,17 @@ import style from "./Utkast.module.css";
 import { LinkPanel } from "@navikt/ds-react";
 import { Edit } from "@navikt/ds-icons";
 import { useQuery } from "react-query";
-import { antallUtkastUrl, minSideUtkastUrl } from "../../api/urls";
+import { antallUtkastUrl, minSideUtkastUrl, digisosUtkastApiUrl } from "../../api/urls";
 import { fetcher } from "../../api/api";
 import { useIntl } from "react-intl";
 
 const Utkast = () => {
   const { data: data } = useQuery(antallUtkastUrl, fetcher);
+  const { data: digisosAntall } = useQuery(digisosUtkastApiUrl, fetcher);
+
   const translate = useIntl();
 
-  const antallUtkast = data?.antall;
+  const antallUtkast = data?.antall + digisosAntall?.antall;
   const showUtkast = antallUtkast > 0;
   const isEntall = antallUtkast === 1;
 

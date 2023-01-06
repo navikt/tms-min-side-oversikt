@@ -5,6 +5,7 @@ import { useQuery } from "react-query";
 import { antallUtkastUrl, minSideUtkastUrl } from "../../api/urls";
 import { fetcher } from "../../api/api";
 import { useIntl } from "react-intl";
+import { logAmplitudeEvent } from "../../utils/amplitude";
 
 const Utkast = () => {
   const { data: data } = useQuery(antallUtkastUrl, fetcher);
@@ -17,7 +18,12 @@ const Utkast = () => {
   return (
     <>
       {showUtkast ? (
-        <LinkPanel className={style.wrapper} href={minSideUtkastUrl} border={false}>
+        <LinkPanel
+          className={style.wrapper}
+          href={minSideUtkastUrl}
+          border={false}
+          onClick={() => logAmplitudeEvent("Utkast knapp")}
+        >
           <div
             style={{
               display: "grid",
